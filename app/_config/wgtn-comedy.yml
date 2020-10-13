@@ -1,5 +1,5 @@
 ---
-Name: myproject
+Name: wgtn-comedy
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app

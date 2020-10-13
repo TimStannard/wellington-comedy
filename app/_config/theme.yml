@@ -1,8 +1,7 @@
 ---
-Name: mytheme
+Name: Wellington Comedy
 ---
 SilverStripe\View\SSViewer:
   themes:
     - '$public'
-    - 'simple'
     - '$default'
