@@ -1,39 +1,23 @@
 <?php
 
-// namespace SilverStripe\WellingtonComedy;
-// use Page; 
-// use PageController; 
-
-use SilverStripe\ORM\DataObject;    
-
-// class ComedianPage extends Page 
-// {
-
-// 	private static $can_be_root = false;
-//     private static $table_name = 'ComedianData';
-// 	//Tell the system that we have multiple data elements relating to this page
-//     private static $has_many = [
-//     'ComedianData' => ComedianContent::class
-//     ];
-
-// }
-
-
-// class ComedianPageController extends PageController 
-// {
-
-// }
-
+use SilverStripe\ORM\DataObject;
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class Comedian extends DataObject 
 {
 
     private static $db = [
         'Name' => 'Varchar',
-        'Blurb' => 'Varchar',
+        'Short Blurb' => 'Varchar',
+        'Profile' => 'Text',
     ];
 
-    private static $has_one = [
-        'Category' => 'Category'
+       private static $has_one = [
+        'Photo' => Image::class
     ];
+
+        // private static $has_one = [
+    //     'Category' => 'Category'
+    // ];
 }
