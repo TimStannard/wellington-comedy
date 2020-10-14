@@ -60,7 +60,7 @@ input[type="text"] {
 }
 body {
   width: 100%;
-  max-width: 68rem;
+  max-width: 75%;
   margin: 0 auto;
   font: 1.6rem/1.25 "Lato", Arial, sans-serif;
   background:#302f83;
@@ -102,6 +102,15 @@ nav{
   color:white;
   font-size:30px;
   font-weight:800;
+}
+
+/*footer*/
+footer {
+  display:none;
+}
+
+.footer-copyright {
+  text-align:center;
 }
 
 

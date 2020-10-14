@@ -9,9 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> 
  	 <script src="https://kit.fontawesome.com/b0f16cc58c.js" crossorigin="anonymous"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50" style="margin-top:150px;">
      <% include TopBar %>
      $Layout
+     $Content
      <% include Footer %> 
 </body>
 </html>
