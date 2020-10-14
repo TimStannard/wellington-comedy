@@ -5,19 +5,27 @@ use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class Comedian extends DataObject 
+
 {
 
     private static $db = [
         'Name' => 'Varchar',
-        'Short Blurb' => 'Varchar',
+        'Blurb' => 'Varchar',
         'Profile' => 'Text',
+        'test' => 'Text'
     ];
 
        private static $has_one = [
-        'Photo' => Image::class
+        'Photo' => Image::class,
+        // 'ComedianHolder' => ComedianHolder::class,
+    ];
+        private static $owns = [
+        'Photo'
     ];
 
-        // private static $has_one = [
-    //     'Category' => 'Category'
-    // ];
+        private static $searchable_fields = [
+        'Name'
+    ];
+
+
 }

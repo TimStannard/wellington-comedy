@@ -6,11 +6,10 @@ class ManageComedians extends ModelAdmin
 {
 
     private static $managed_models = [
-        'Comedian',
-        'Category'
+        Comedian::class
     ];
 
-    private static $url_segment = 'comedians';
+    private static $url_segment = 'manage-comedians';
     private static $menu_title = 'Manage Comedians';
     private static $menu_icon_class = 'font-icon-happy';
 }
