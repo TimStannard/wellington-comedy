@@ -4,9 +4,7 @@
           <div class="row">
                     <% loop $ViewComics %>
                     <div class="col-md-4 col-sm-4" style="border:1px solid red; padding:20px;">
-                         <%-- <div><a href="$Link">$Logo</a></div> --%>
                          <h3>$Name</h3>
-                         <%-- <p>$Blurb</p> --%>
                          <span class="button"><a href="#">Read more</a></span>
                     </div>
                     <% end_loop %>

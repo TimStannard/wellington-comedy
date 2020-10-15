@@ -20,7 +20,7 @@ class ComedianHolderController extends PageController
 {
 	public function ViewComics() 
   { 
-    return Comedians::get()
+    return Comedian::get()
             ->limit(6);
   } 
 
