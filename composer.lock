@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbecb11d694575134abba02f7e65930b",
+    "content-hash": "cb6b72b9596eca87de64b5ce8721494b",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -861,6 +861,56 @@
                 "topsort"
             ],
             "time": "2016-11-19T14:58:11+00:00"
+        },
+        {
+            "name": "mattclegg/silverstripe-event-calendar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mattclegg/silverstripe-event-calendar.git",
+                "reference": "0d5b8440164d4358774357d2acb6a29fb37a5300"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mattclegg/silverstripe-event-calendar/zipball/0d5b8440164d4358774357d2acb6a29fb37a5300",
+                "reference": "0d5b8440164d4358774357d2acb6a29fb37a5300",
+                "shasum": ""
+            },
+            "require": {
+                "johngrogg/ics-parser": "^2",
+                "nesbot/carbon": "1.39.1",
+                "silverstripe/cms": "^4"
+            },
+            "replace": {
+                "silverstripe/event-calendar": "*",
+                "unclecheese/event-calendar": "*"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Carlino"
+                },
+                {
+                    "name": "Grant Heggie",
+                    "email": "grant@grantheggie.design"
+                }
+            ],
+            "description": "Event calendar for the Silverstripe CMS",
+            "keywords": [
+                "calendar",
+                "events",
+                "silverstripe"
+            ],
+            "time": "2020-04-14T09:08:52+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1767,55 +1817,6 @@
                 "silverstripe"
             ],
             "time": "2020-06-15T00:35:00+00:00"
-        },
-        {
-            "name": "silverstripe/event-calendar",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unclecheese/silverstripe-event-calendar.git",
-                "reference": "7bc21f652655cc3b1ea9a086d408bf5cf5d758f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/7bc21f652655cc3b1ea9a086d408bf5cf5d758f3",
-                "reference": "7bc21f652655cc3b1ea9a086d408bf5cf5d758f3",
-                "shasum": ""
-            },
-            "require": {
-                "johngrogg/ics-parser": "^2",
-                "nesbot/carbon": "1.39.1",
-                "silverstripe/cms": "^4"
-            },
-            "replace": {
-                "silverstripe/event-calendar": "*"
-            },
-            "type": "silverstripe-vendormodule",
-            "extra": {
-                "expose": [
-                    "client"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Carlino"
-                },
-                {
-                    "name": "Grant Heggie",
-                    "email": "grant@grantheggie.design"
-                }
-            ],
-            "description": "Event calendar for the Silverstripe CMS",
-            "keywords": [
-                "calendar",
-                "events",
-                "silverstripe"
-            ],
-            "time": "2020-05-17T11:13:30+00:00"
         },
         {
             "name": "silverstripe/framework",
@@ -4537,7 +4538,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "silverstripe/recipe-cms": 0,
-        "silverstripe/login-forms": 0
+        "silverstripe/login-forms": 0,
+        "mattclegg/silverstripe-event-calendar": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

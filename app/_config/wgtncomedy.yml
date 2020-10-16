@@ -29,3 +29,12 @@ SilverStripe\Core\Injector\Injector:
       ResolutionFileIDHelpers:
         - '%$SilverStripe\Assets\FilenameParsing\HashFileIDHelper'
       VersionedStage: Stage
+
+# event calendar
+
+UncleCheese\EventCalendar\Pages\Calendar:
+    timezone: New_Zealand/Auckland
+    language: EN
+    jquery_included: true
+    # caching_enabled: true
+    # cache_future_years: 2
