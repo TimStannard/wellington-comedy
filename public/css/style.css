@@ -104,6 +104,14 @@ nav{
   font-weight:800;
 }
 
+/*comic page*/
+
+.comic-profile-image {
+  border-radius:100%;
+  width:200px;
+  height:200px;
+}
+
 /*footer*/
 footer {
   display:none;

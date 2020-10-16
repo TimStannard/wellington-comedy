@@ -14,15 +14,16 @@ class ComedianHolder extends Page
     private static $owns = [
     'Comedians'
     ];
+
+    public function ViewComics() 
+  { 
+    return Comedian::get();
+  } 
 }
 
 class ComedianHolderController extends PageController 
 {
-	public function ViewComics() 
-  { 
-    return Comedian::get()
-            ->limit(6);
-  } 
+
 
 
 }

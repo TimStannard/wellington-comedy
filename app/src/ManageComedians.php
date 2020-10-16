@@ -1,5 +1,6 @@
 <?php
 
+namespace SilverStripe\WellingtonComedy;
 use SilverStripe\Admin\ModelAdmin;
 
 class ManageComedians extends ModelAdmin 

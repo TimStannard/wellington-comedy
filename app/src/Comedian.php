@@ -21,7 +21,7 @@ class Comedian extends DataObject
 
        private static $has_one = [
         'Photo' => Image::class,
-        // 'ComedianHolder' => ComedianHolder::class,
+        'ComedianHolder' => ComedianHolder::class,
     ];
         private static $owns = [
         'Photo'
