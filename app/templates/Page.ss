@@ -12,7 +12,7 @@
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50" style="margin-top:150px;">
      <% include TopBar %>
      $Layout
-     $Content
+     <%-- $Content --%>
      <% include Footer %> 
 </body>
 </html>
