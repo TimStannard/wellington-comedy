@@ -11,6 +11,13 @@
         "nesbot/carbon": "1.39.1",
         "mattclegg/silverstripe-event-calendar": "dev-master"
     },
+    "repositories": [
+    {
+            "type": "vcs",
+            "url": "https://github.com/gordonbanderson/silverstripe-calendar.git"
+        }
+    ],
+
     "require-dev": {
         "phpunit/phpunit": "^5.7",
         "sminnee/phpunit-mock-objects": "^3.4.5"
