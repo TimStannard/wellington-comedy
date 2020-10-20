@@ -16,12 +16,10 @@ class Comedian extends DataObject
         'Name' => 'Varchar',
         'Blurb' => 'Varchar',
         'Profile' => 'Text',
-        'test' => 'Text'
     ];
 
        private static $has_one = [
-        'Photo' => Image::class,
-        'ComedianHolder' => ComedianHolder::class,
+        'Photo' => Image::class
     ];
         private static $owns = [
         'Photo'
