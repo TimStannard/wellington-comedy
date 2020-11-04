@@ -9,4 +9,6 @@ class ComedianHolder extends Page
    private static $allowed_children = [
       ComedianPage::class
     ];
+
+   private static $icon_class = 'font-icon-happy';
 }

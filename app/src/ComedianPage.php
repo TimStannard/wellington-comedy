@@ -33,7 +33,6 @@ class ComedianPage extends Page
     private static $table_name = 'ComedianData';
 
     private static $db = [
-        // 'Name' => 'Varchar(100)',
         'Blurb' => 'Text',
         'Profile' => 'Text',
     ];
@@ -53,13 +52,12 @@ class ComedianPage extends Page
         'Name'
     ];
 
+   private static $icon_class = 'font-icon-block-user';
+
     public function getCMSFields() 
   	{
 
     $fields = parent::getCMSFields();
-
-	// $fields->addFieldToTab('Root.Main', TextField::create('Name','First and last name')
-	// 	->setDescription('Comedian name'), 'Content');  
 
 	$fields->addFieldToTab('Root.Main', TextField::create('Blurb','Short blurb')
 		->setDescription('E.g. Winner of Raw Quest 2020'), 'Content');  
