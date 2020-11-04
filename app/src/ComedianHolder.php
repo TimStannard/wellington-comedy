@@ -2,28 +2,11 @@
 
 namespace SilverStripe\WellingtonComedy;
 
-use Page;   
-use PageController;   
+use Page;    
 
 class ComedianHolder extends Page 
 {
-    private static $has_many = [
-    'Comedians' => Comedian::class,
-	];
-
-    private static $owns = [
-    'Comedians'
+   private static $allowed_children = [
+      ComedianPage::class
     ];
-
-    public function ViewComics() 
-  { 
-    return Comedian::get();
-  } 
-}
-
-class ComedianHolderController extends PageController 
-{
-
-
-
 }
