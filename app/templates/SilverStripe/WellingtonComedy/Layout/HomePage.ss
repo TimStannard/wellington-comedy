@@ -6,6 +6,9 @@
           <div class="row">
                <div class="col-md-12 col-sm-12">
                     <h2>What's on tonight</h2>
+                    <% loop $TodaysEvents %>
+                    $Title
+                    <% end_loop %>
                </div>
           </div>
      </div>

@@ -57,23 +57,29 @@ class ComedianPage extends Page
     public function getCMSFields() 
   	{
 
-    $fields = parent::getCMSFields();
+        $fields = parent::getCMSFields();
 
-	$fields->addFieldToTab('Root.Main', TextField::create('Blurb','Short blurb')
-		->setDescription('E.g. Winner of Raw Quest 2020'), 'Content');  
+    	$fields->addFieldToTab('Root.Main', TextField::create('Blurb','Short blurb')
+    		->setDescription('E.g. Winner of Raw Quest 2020'), 'Content');  
 
-	$fields->addFieldToTab('Root.Main', TextareaField::create('Profile','Profile info')
-		->setDescription('Longer profile and bio'), 'Content');  
+    	$fields->addFieldToTab('Root.Main', TextareaField::create('Profile','Profile info')
+    		->setDescription('Longer profile and bio'), 'Content');  
 
-    $fields->addFieldToTab('Root.Main', $photo =UploadField::create('Photo','Headshot photo'));
+        $fields->addFieldToTab('Root.Main', $photo =UploadField::create('Photo','Headshot photo'), 'Metadata');
 
-    $photo->setFolderName('comedian-photos');
+        $photo->setFolderName('comedian-photos');
 
-    $fields->removeFieldFromTab("Root.Main","MenuTitle");
-    $fields->removeFieldFromTab("Root.Main","URLSegment");
-    $fields->removeFieldFromTab("Root.Main","Content");
+        $fields->removeByName([
+            'MenuTitle',
+            'URLSegment',
+            'Content',
+        ]);
 
-    return $fields;
+        /*$fields->removeFieldFromTab("Root.Main","MenuTitle");
+        $fields->removeFieldFromTab("Root.Main","URLSegment");
+        $fields->removeFieldFromTab("Root.Main","Content");*/
+
+        return $fields;
 
   	}
 

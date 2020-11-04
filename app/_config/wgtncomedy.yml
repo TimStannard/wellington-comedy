@@ -38,3 +38,5 @@ UncleCheese\EventCalendar\Pages\Calendar:
     jquery_included: true
     # caching_enabled: true
     # cache_future_years: 2
+UncleCheese\EventCalendar\Models\CalendarDateTime:
+  time_format_override: 12
