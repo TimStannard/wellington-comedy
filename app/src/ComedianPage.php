@@ -23,7 +23,7 @@ use Page;
 class ComedianPage extends Page 
 {
 
-        public function CurrentPageURL()
+    public function CurrentPageURL()
     {
         return $this->URLSegment;
     }
@@ -37,18 +37,19 @@ class ComedianPage extends Page
         'Profile' => 'Text',
     ];
 
-       private static $belongs_many_many = array(
-        'Events' => 'CalendarEvent'
+    private static $belongs_many_many = array(
+        'Events' => CalendarEvent::class
     );
 
-       private static $has_one = [
+    private static $has_one = [
         'Photo' => Image::class
     ];
-        private static $owns = [
+
+    private static $owns = [
         'Photo'
     ];
 
-        private static $searchable_fields = [
+    private static $searchable_fields = [
         'Name'
     ];
 
@@ -74,10 +75,6 @@ class ComedianPage extends Page
             'URLSegment',
             'Content',
         ]);
-
-        /*$fields->removeFieldFromTab("Root.Main","MenuTitle");
-        $fields->removeFieldFromTab("Root.Main","URLSegment");
-        $fields->removeFieldFromTab("Root.Main","Content");*/
 
         return $fields;
 

@@ -12,6 +12,11 @@
                          <p>$Blurb</p>
                          <hr>
                          $Profile
+                         <hr>
+                         Upcoming Shows:
+                          <% loop $Events %>
+                            $Title
+                          <% end_loop %>
                     </div>
           </div>
      </div>
