@@ -2,22 +2,13 @@
 
 namespace SilverStripe\WellingtonComedy;
 
-use Page; 
-use PageController;     
+use Page;    
 
 class ComedianHolder extends Page 
 {
-
-	  private static $allowed_children = [
+   private static $allowed_children = [
       ComedianPage::class
     ];
-     private static $hide_ancestor = 'ComedianHolder';
 
+   private static $icon_class = 'font-icon-happy';
 }
-
-
-class ComedianHolderController extends PageController 
-{
-
-}
-

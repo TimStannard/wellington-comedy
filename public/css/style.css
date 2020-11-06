@@ -65,7 +65,19 @@ body {
   font: 1.6rem/1.25 "Lato", Arial, sans-serif;
   background:#302f83;
   color:white;
+  padding-bottom:100px;
 }
+
+table {
+  color:black;
+}
+
+.calendar-widget-table tbody .hasEvent {
+/*background-image:none!important;*/
+  background-color: grey;
+  color:white;
+}
+
 @media screen and (min-width: 620px) {
   body {
     font-size: 1.9rem;
@@ -102,6 +114,14 @@ nav{
   color:white;
   font-size:30px;
   font-weight:800;
+}
+
+/*comic page*/
+
+.comic-profile-image {
+  border-radius:100%;
+  width:200px;
+  height:200px;
 }
 
 /*footer*/

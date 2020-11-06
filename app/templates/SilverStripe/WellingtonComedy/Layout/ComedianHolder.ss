@@ -3,11 +3,18 @@
      <div class="container-fluid">
           <div class="row">
                     <% loop $Children %>
-                    <div class="col-md-4 col-sm-4" style="border:1px solid red; padding:20px;">
-                         <%-- <div><a href="$Link">$Logo</a></div> --%>
-                         <h3>$Title</h3>
-                         <%-- <p>$Blurb</p> --%>
-                         <span class="button"><a href="$Link">Read more</a></span>
+                    <div class="col-md-4 col-sm-4" style="">
+                         <% if $Photo %>
+                        <a href="$Link">
+                              <% with $Photo.Fit(200,200) %>
+                              <div>
+                                   <img class="comic-profile-image" src="$URL" alt="" />
+                              </div>
+                         </a>
+                              <% end_with %>
+                         <% end_if %>
+
+                    <a href="$Link">$Title</a>
                     </div>
                     <% end_loop %>
           </div>
