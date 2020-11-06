@@ -9,10 +9,7 @@
 *::after {
   box-sizing: border-box;
 }
-*:focus {
-  outline: 3px dashed #228bec;
-  outline-offset: 0;
-}
+
 html {
   font: 62.5% / 1.15 sans-serif;
 }
@@ -60,9 +57,7 @@ input[type="text"] {
 }
 body {
   width: 100%;
-  max-width: 75%;
   margin: 0 auto;
-  font: 1.6rem/1.25 "Lato", Arial, sans-serif;
   background:#302f83;
   color:white;
   padding-bottom:100px;
@@ -72,41 +67,41 @@ table {
   color:black;
 }
 
-.calendar-widget-table tbody .hasEvent {
-/*background-image:none!important;*/
-  background-color: grey;
-  color:white;
-}
-
-@media screen and (min-width: 620px) {
-  body {
-    font-size: 1.9rem;
-    line-height: 1.31579;
-  }
-}
-
-
 /*------------------------------------------------*/
 
 
-/* GLOBAL STYLES */
+/* Global styles */
 
 
 /*------------------------------------------------*/
 
 
 /*navbar*/
-/*remove this later*/
-nav{
-    background:#4141bf;
+
+#navbar-brand img {
+  max-width:6.5em;
+  transition:all 0.2s ease-in-out;
+  margin: 0.35em 0em 0em 0.3em;
+}
+
+#navbar-brand img:hover {
+  opacity:0.7;
+}
+
+#nav-links{
+  font-family: "Source Sans Pro", "Lato", Arial, sans-serif;
+  text-transform:uppercase;
+  font-size:1.625em;
+  letter-spacing: 0.031em;
+  font-weight: 400;
 }
 
 #nav-links {
-  padding:20px 30px;
+  padding:1.25em 1.875em;
 }
 
 #nav-links a {
-  margin-left:30px;
+  margin-left:1.875em;
   color:white;
 }
 
@@ -116,12 +111,29 @@ nav{
   font-weight:800;
 }
 
-/*comic page*/
+/*------------------------------------------------*/
+
+
+/* Page styles */
+
+
+/*------------------------------------------------*/
+
+/*--------------------------------------comic page*/
 
 .comic-profile-image {
   border-radius:100%;
   width:200px;
   height:200px;
+}
+
+/*--------------------------------------upcoming shows page*/
+
+
+.calendar-widget-table tbody .hasEvent {
+/*background-image:none!important;*/
+  background-color: grey;
+  color:white;
 }
 
 /*footer*/
@@ -133,9 +145,11 @@ footer {
   text-align:center;
 }
 
-.valSilverStripe_WellingtonComedy_ComedianHolder {
+/*.valSilverStripe_WellingtonComedy_ComedianHolder {
   display:none!important;
 }
+*/
+
 
 /*------------------------------------------------*/
 
@@ -155,12 +169,12 @@ footer {
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-  }
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-   
-  }
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1400px) {
-    
-  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ 
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1400px) {
+  
+}

@@ -16,8 +16,8 @@ use Page;
 
 class HomePage extends Page 
 {
-  //   public function ViewEvents() 
-  // { 
-  //   return CalendarEvent::get();
-  // } 
+    public function ViewEvents() 
+  { 
+    return CalendarEvent::get();
+  } 
 }

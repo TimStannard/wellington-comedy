@@ -1,20 +1,23 @@
 <!-- Hero Section -->
 
 
-<section id="home-hero2" class="hero-section2" style="border:1px solid white; margin-top:30px; padding:20px;">
+<section id="home-hero" class="hero-section" style="background-color:red;">
      <div class="container-fluid">
           <div class="row">
                <div class="col-md-12 col-sm-12">
                     <h2>What's on tonight</h2>
                     <% loop $TodaysEvents %>
                     $Title
+                    <p><a href="$Link">Read more</a></p>
                     <% end_loop %>
                </div>
           </div>
      </div>
 </section>
 
-<section id="home-hero" class="hero-section" style="border:1px solid white; margin-top:30px; padding:20px;">
+
+<%-- 
+<section id="home-calendar" class="" style="border:1px solid white; margin-top:30px; padding:20px;">
      <div class="container-fluid">
           <div class="row">
                <div class="col-md-12 col-sm-12">
@@ -37,17 +40,7 @@
           </div>
      </div>
 </section>
-
-<section id="home-hero2" class="hero-section2" style="border:1px solid white; margin-top:30px; padding:20px;">
-     <div class="container-fluid">
-          <div class="row">
-               <div class="col-md-12 col-sm-12">
-                    <h2>Gig Calendar</h2>
-               </div>
-          </div>
-     </div>
-</section>
-
+ --%>
 <%-- <section id="home-hero2" class="hero-section2" style="border:1px solid white; margin-top:30px; padding:20px;">
      <div class="container-fluid">
           <div class="row">
