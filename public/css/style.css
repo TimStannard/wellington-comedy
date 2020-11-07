@@ -74,23 +74,6 @@ a:hover {
     text-decoration: none;
 }
 
-/*================================================
-Fancy Underline
-==================================================*/
-
-.underline-wave {
-  text-decoration: none;
-}
-.underline-wave:hover {
-    border-bottom-color: transparent;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='white' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-    background-position: 0 1.35em;
-    background-size: auto 4px;
-    background-repeat:repeat-x;
-    padding-bottom:10px;
-    text-decoration: none;
-  }
-
 
 /*------------------------------------------------*/
 
@@ -100,13 +83,32 @@ Fancy Underline
 
 /*------------------------------------------------*/
 
+/*text effects*/
+
+.underline-wave {
+  text-decoration: none;
+}
+.underline-wave:hover {
+  border-bottom-color: transparent;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='white' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 1.35em;
+  background-size: auto 4px;
+  background-repeat:repeat-x;
+  padding-bottom:10px;
+  text-decoration: none;
+}
+
 
 /*navbar*/
 
+#nav-container {
+  background:#302F83;
+  padding-bottom:2em;
+}
 #navbar-brand img {
-  max-width:6.5em;
+  max-width:6em;
   transition:all 0.2s ease-in-out;
-  margin: 0.35em 0em 0em 0.3em;
+  margin: 0.55em 0em 0em 0.55em;
 }
 
 #navbar-brand img:hover {
@@ -122,10 +124,12 @@ Fancy Underline
 }
 
 #nav-links {
-  padding:1.25em 1.875em;
+  padding:1.25em 3em;
 }
 
 #nav-links a {
+  position:relative;
+  top:0.5em;
   margin-left:1.875em;
   color:white;
 }
@@ -136,13 +140,62 @@ Fancy Underline
   font-weight:800;
 }
 
+/*slider*/
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    border-bottom:1px solid white;
+    padding-top:10em;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: white;
+  opacity:0.3;
+  font-weight:2000;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+    opacity:0.3;
+}
+.swiper-pagination-bullet-active {
+   background: white;
+       opacity:1;
+}
+
+.swiper-slide {
+  padding:4.5em 15vw;
+}
+
 /*------------------------------------------------*/
 
 
 /* Page styles */
 
 
-/*------------------------------------------------*/
+/*--------------------------------------home page*/
+
+/*slider*/
+.hero-subheader, .todays-events-swiper h1 {
+  font-family: Lato, Arial, sans-serif;
+  font-weight: 900;
+}
+
+.hero-subheader {
+  font-size: 3.5em;
+  max-width: 10em;
+  line-height: 1.1em;
+}
+
+.todays-events-swiper h1{
+  margin-top:0.25em;
+ font-size: 9.5em;
+  line-height: 0.91em;
+  max-width: 60vw;
+ text-transform: uppercase;
+ color:white;
+}
 
 /*--------------------------------------comic page*/
 
