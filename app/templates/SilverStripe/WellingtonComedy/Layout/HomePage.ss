@@ -14,6 +14,13 @@
                                         <h2>LIVE COMEDY</h2>
                                         <div class="hero-subheader"><i class="fas fa-caret-right"></i> WHAT’S ON TONIGHT</div>
                                         <a href="$Link"><h1 class="hero-gig-link">$Title</h1></a>
+
+                                        <% loop $DateTimes %>
+                                            <% if $SliderImage %>
+                                            <%-- <h3>Slider image found.</h3> --%>
+                                            <% end_if %>
+                                        <% end_loop %>
+
                                         <div class="todays-description">$ShortBlurb</div>
                                         <a href="$TicketLink"><div class="cta-btn">Book tickets</div></a>
                                    </div>
