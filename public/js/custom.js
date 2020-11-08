@@ -12,6 +12,15 @@ $(window).load(function() {
 
 $(document).ready(function() {
 
+    if($('.swiper-container .swiper-slide').length <= 1) {
+      $('.swiper-wrapper').addClass( "disabled" );
+      $('.swiper-pagination').addClass( "disabled" );
+      $('.swiper-button-next').addClass( "disabled" );
+      $('.swiper-button-prev').addClass( "disabled" );
+    }
+
+    // console.log(($('.swiper-container .swiper-slide').length))
+
 
     /*-------------------------------------------------------------------------------
       Navigation - Hide mobile menu after clicking on a link
@@ -69,7 +78,7 @@ $(document).ready(function() {
 var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
 
     // If we need pagination
     pagination: {
@@ -81,6 +90,5 @@ var mySwiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     }
+
 })
-
-
