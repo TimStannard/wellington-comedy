@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section id="home-hero" class="hero-section fade-in-quick">
+<section id="home-hero" class="hero-section">
      <div class="container-fluid p-0">
           <div class="row no-gutters">
                <div class="col">
@@ -12,8 +12,10 @@
                               <% loop $TodaysEvents %>
                                    <div class="swiper-slide">
                                         <h2>LIVE COMEDY</h2>
-                                        <div class="hero-subheader wow fadeInDown"><i class="fas fa-caret-right"></i> WHAT’S ON TONIGHT</div>
-                                        <a href="$Link"><h1 class="wow flipInX" data-wow-delay="0.3s">$Title</h1></a>
+                                        <div class="hero-subheader"><i class="fas fa-caret-right"></i> WHAT’S ON TONIGHT</div>
+                                        <a href="$Link"><h1>$Title</h1></a>
+                                        <div class="todays-description">$ShortBlurb</div>
+                                        <a href="$TicketLink"><div class="cta-btn">Book tickets</div></a>
                                    </div>
                               <% end_loop %>
                          <% end_if %>
