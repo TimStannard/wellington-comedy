@@ -11,6 +11,7 @@ $(window).load(function() {
 -------------------------------------------*/
 
 $(document).ready(function() {
+    console.log($('.swiper-container .swiper-slide').length);
 
     if($('.swiper-container .swiper-slide').length <= 1) {
       $('.swiper-wrapper').addClass( "disabled" );
@@ -31,13 +32,13 @@ $(document).ready(function() {
     });
 
 
-    $(window).scroll(function() {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        }
-    });
+    // $(window).scroll(function() {
+    //     if ($(".navbar").offset().top > 50) {
+    //         $(".navbar-fixed-top").addClass("top-nav-collapse");
+    //     } else {
+    //         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    //     }
+    // });
 
     // animated hamburger nav menu
 

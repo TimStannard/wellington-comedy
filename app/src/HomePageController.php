@@ -4,29 +4,47 @@ namespace SilverStripe\WellingtonComedy;
 
 use PageController;
 use UncleCheese\EventCalendar\Pages\CalendarEvent;
+use SilverStripe\ORM\ArrayList;
 
 class HomePageController extends PageController 
 {
 	public function TodaysEvents()
-	{
-		return CalendarEvent::get()
-		->filter([
-			'DateTimes.StartDate' => date('Y-m-d'),
-			'DateTimes.StartTime:GreaterThan' => time(),
-			'IsFeatured' => false
+	{	
+		$ce = CalendarEvent::get()->filter([
+		'DateTimes.StartTime:GreaterThan' => time(),
+		'IsFeatured' => false
 		]);
-
+		$r = new ArrayList();	
+		foreach( $ce as $e ){
+			if ($e){
+				foreach($e->DateTimes() as $dt) {
+					$date = $dt->dbObject('StartDate');
+					if($date->IsToday()){ 
+						$r->push($dt);
+					} 
+				}			
+			}
+		}
+		return $r;
 	}
+
 	public function TodaysFeaturedEvents()
-	{
-		return CalendarEvent::get()
-		->filter([
-			'DateTimes.StartDate' => date('Y-m-d'),
-			'DateTimes.StartTime:GreaterThan' => time(),
-			'IsFeatured' => true
+	{	
+		$ce = CalendarEvent::get()->filter([
+		'DateTimes.StartTime:GreaterThan' => time(),
+		'IsFeatured' => true
 		]);
-
+		$r = new ArrayList();	
+		foreach( $ce as $e ){
+			if ($e){
+				foreach($e->DateTimes() as $dt) {
+					$date = $dt->dbObject('StartDate');
+					if($date->IsToday()){ 
+						$r->push($dt);
+					} 
+				}			
+			}
+		}
+		return $r;
 	}
-
 }
-

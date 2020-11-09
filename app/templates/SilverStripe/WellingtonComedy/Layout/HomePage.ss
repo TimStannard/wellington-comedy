@@ -8,35 +8,39 @@
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                          <!-- Slides -->
+
                          <% if $TodaysFeaturedEvents %>
-                         <% loop $TodaysFeaturedEvents %>
-                                   <div class="swiper-slide">
-                                        <h2>LIVE COMEDY</h2>
-                                        <div class="hero-subheader"><i class="fas fa-caret-right"></i> WHAT’S ON TONIGHT</div>
-                                        <a href="$Link"><h1 class="hero-gig-link">$Title</h1></a>
-
-                                        <% loop $DateTimes %>
-                                            <% if $SliderImage %>
-                                            <%-- <h3>Slider image found.</h3> --%>
-                                            <% end_if %>
-                                        <% end_loop %>
-
-                                        <div class="todays-description">$ShortBlurb</div>
-                                        <a href="$TicketLink"><div class="cta-btn">Book tickets</div></a>
+                              <% loop $TodaysFeaturedEvents %>
+                                   <% if $SliderImage %>
+                                        <div class="swiper-slide" class="image-contained-slide" style="background: url($SliderImage.Link) no-repeat; background-size: contain; background-position: 80% 100%;">
+                                        <% else %>
+                                        <div class="swiper-slide" class="image-contained-slide" style="background: grey; background-size: contain; background-position: 80% 100%;">
+                                   <% end_if %>
+                                   <h2>LIVE COMEDY</h2>
+                                   <div class="hero-subheader"><i class="fas fa-caret-right"></i> FEATURED TONIGHT</div>
+                                   <a href="$Link"><h1 class="hero-gig-link">$Title</h1></a>
+                                   <div class="todays-description">$ShortBlurb</div>
+                                   <a href="$TicketLink"><div class="cta-btn">Book tickets</div></a>
                                    </div>
                               <% end_loop %>
                          <% end_if %>
+
                          <% if $TodaysEvents %>
                               <% loop $TodaysEvents %>
-                                   <div class="swiper-slide">
-                                        <h2>LIVE COMEDY</h2>
-                                        <div class="hero-subheader"><i class="fas fa-caret-right"></i> WHAT’S ON TONIGHT</div>
-                                        <a href="$Link"><h1 class="hero-gig-link">$Title</h1></a>
-                                        <div class="todays-description">$ShortBlurb</div>
-                                        <a href="$TicketLink"><div class="cta-btn">Book tickets</div></a>
+                                   <% if $SliderImage %>
+                                        <div class="swiper-slide" class="image-contained-slide" style="background: url($SliderImage.Link) no-repeat; background-size: contain; background-position: 80% 100%;">
+                                        <% else %>
+                                        <div class="swiper-slide" class="image-contained-slide" style="background: grey; background-size: contain; background-position: 80% 100%;">
+                                   <% end_if %>
+                                   <h2>LIVE COMEDY</h2>
+                                   <div class="hero-subheader"><i class="fas fa-caret-right"></i> WHAT’S ON TONIGHT</div>
+                                   <a href="$Link"><h1 class="hero-gig-link">$Title</h1></a>
+                                   <div class="todays-description">$ShortBlurb</div>
+                                   <a href="$TicketLink"><div class="cta-btn">Book tickets</div></a>
                                    </div>
                               <% end_loop %>
                          <% end_if %>
+
                          <% if not $TodaysEvents && not $TodaysFeaturedEvents%>
                               <div class="swiper-slide">
                                    <h2>LOCAL TALENT</h2>
@@ -45,7 +49,8 @@
                                    <div class="todays-description">$HomePageBlurb</div>
                                    <a href="{$BaseURL}upcoming-shows"><div class="cta-btn">UPCOMING SHOWS</div></a>
                               </div>
-                         <% end_if %>    
+                         <% end_if %>  
+
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination wow fadeIn" data-wow-delay="0.4s"></div>

@@ -171,7 +171,6 @@ a:hover {
 
 .swiper-slide {
   padding:3.5em 12.5vw 4.5em 15vw;
-  background: url("../img/opeti-bg.jpg") no-repeat;
   background-size: contain;
   background-position: 80% 100%;
 }
