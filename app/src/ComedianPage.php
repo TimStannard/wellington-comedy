@@ -10,6 +10,7 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Assets\File;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use UncleCheese\EventCalendar\Models\CalendarDateTime;
 
 use Page; 
 
@@ -31,7 +32,7 @@ class ComedianPage extends Page
     ];
 
     private static $belongs_many_many = array(
-        'Events' => CalendarEvent::class
+        'EventDateTime' => CalendarDateTime::class
     );
 
     private static $has_one = [
