@@ -90,7 +90,7 @@ a:hover {
 }
 .underline-wave:hover {
   border-bottom-color: transparent;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='white' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23f1b0c4' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   background-position: 0 1.5em;
   background-size: auto 5px;
   background-repeat:repeat-x;
@@ -133,60 +133,14 @@ a:hover {
   color:white;
 }
 
+#nav-links a:hover {
+  color:#f1b0c4;
+}
+
 #navbar-brand {
   color:white;
   font-size:30px;
   font-weight:800;
-}
-
-/*slider*/
-
-.swiper-container {
-    width: 95%;
-    height: 100vh;
-    padding-top:10em;
-}
-
-.swiper-button-next:after, .swiper-button-prev:after {
-  color: white;
-  opacity:0.5;
-  font-weight:900;
-  transition:all 0.2s ease-in-out;
-}
-
-.swiper-button-next:hover:after, .swiper-button-prev:hover:after {
-  opacity:1;
-}
-
-.swiper-pagination-bullet {
-  position:relative;
-  top:-2.5em;
-  background: white;
-  opacity:0.3;
-}
-.swiper-pagination-bullet-active {
-   background: white;
-   opacity:1;
-}
-
-.swiper-slide {
-  padding:3.5em 12.5vw 4.5em 15vw;
-  background-size: contain;
-  background-position: 80% 100%;
-}
-
-.swiper-wrapper.disabled {
-    transform: translate3d(0px, 0, 0) !important;
-}
-.swiper-pagination.disabled {
-    display: none;
-}
-.swiper-button-next.disabled, .swiper-button-prev.disabled {
-    display: none;
-}
-
-.swiper-button-disabled:after {
-  opacity:0;
 }
 
 /*animation classes*/
@@ -197,12 +151,6 @@ a:hover {
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }*/
-
-i {
-  animation-name: fade-in-tim;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-}
 
 /*animations*/
 
@@ -227,104 +175,44 @@ i {
 
 /*--------------------------------------home page*/
 
-/*slider*/
-.todays-events-swiper .hero-subheader, h1, h2, div {
-  font-family: Lato, Arial, sans-serif;
-  font-weight: 900;
-}
 
-.hero-subheader {
-  font-size: 3.5em;
-  max-width: 10em;
-  line-height: 1.1em;
-}
+  .swiper-container {
+      width: 95%;
+      height: 100vh;
+      padding-top:10em;
+  }
 
-.todays-events-swiper h1{
-  margin-top:0.40em;
- font-size: 9.35em;
-  line-height: 0.935em;
-  max-width: 50vw;
- text-transform: uppercase;
- color:white;
- transition: all 0.2s ease-in-out;
-}
+  .swiper-button-next:after, .swiper-button-prev:after {
+    color: white;
+    opacity:0.65;
+    font-weight:900;
+    font-size:5em;
+    transition:all 0.2s ease-in-out;
+    text-shadow: 0 0 1em #302F83, 0 0 0.5em #302F83, 0 0 0.25em #302F83;
+  }
 
-.hero-gig-link h1:hover {
-  opacity:0.7;
-}
+  .swiper-button-next:hover:after, .swiper-button-prev:hover:after {
+    opacity:1;
+  }
 
-.todays-events-swiper h2{
-  font-size: 4.5rem;
-  color: #f1b0c4;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin-top: 9.35em; 
-  transform: rotate(270deg);
-  transform-origin: 27% 0%;
-  animation-duration: 2.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-}
+  .swiper-pagination-bullet {
+    position:relative;
+    top:-2.5em;
+    background: white;
+    opacity:0.3;
+  }
 
-#home-hero .todays-description {
-  padding-top: 1.5em;
-  font-size: 2.6em;
-  max-width: 35vw;
-  line-height: 1.3em;
-  font-weight:200;
-}
+  .swiper-pagination-bullet-active {
+     background: white;
+     opacity:1;
+  }
 
-#home-hero .cta-btn {
-  display:inline-block;
-  padding:0.85em 1.35em;
-  border: 1px solid white;
-  font-size: 1.9em;
-  border-radius:0.5em;
-  margin-top:2.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color:white;
-  transition: all 0.2s ease-in-out;
-}
-
-#home-hero .cta-btn:hover {
-  color:#302f83;
-  background-color: white;
-}
-
-
-/*--------------------------------------comic page*/
-
-.comic-profile-image {
-  border-radius:100%;
-  width:200px;
-  height:200px;
-}
-
-/*--------------------------------------upcoming shows page*/
-
-
-.calendar-widget-table tbody .hasEvent {
-  background-color: grey;
-  color:white;
-}
-
-/*footer*/
-footer {
-  display:none;
-}
-
-.footer-copyright {
-  text-align:center;
-}
-
-/*.valSilverStripe_WellingtonComedy_ComedianHolder {
-  display:none!important;
-}
-*/
+  .swiper-slide {
+    padding:2em 1em;
+    background-size: contain;
+    background-position: 80% 100%;
+    text-align:center;
+  }
 
 
 /*------------------------------------------------*/
@@ -339,7 +227,139 @@ footer {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media only screen and (min-width: 600px) {
-  /*general*/
+  /*slider*/
+
+  .swiper-slide {
+    padding:2.5em 12.5vw 4.5em 15vw;
+    background-size: contain;
+    background-position: 80% 100%;
+    text-align:left;
+  }
+
+  .swiper-slide:first-of-type {
+    padding:2.5em 12.5vw 4.5em 8.5vw; 
+  }
+
+  .swiper-wrapper.disabled {
+      transform: translate3d(0px, 0, 0) !important;
+  }
+  .swiper-pagination.disabled {
+      display: none;
+  }
+  .swiper-button-next.disabled, .swiper-button-prev.disabled {
+      display: none;
+  }
+
+  .swiper-button-disabled:after {
+    opacity:0;
+  }
+
+  .todays-events-swiper .hero-subheader, h1, h2, div {
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 900;
+  }
+
+  .todays-events-swiper h1, h2 {
+    text-shadow: 0 0 1em #302F83, 0 0 0.5em #302F83, 0 0 0.25em #302F83;
+  }
+
+  .hero-subheader {
+    font-size: 3.25em;
+    max-width: 10em;
+    line-height: 1.1em;
+  }
+
+  .todays-events-swiper h1{
+    margin-top:0.40em;
+   font-size: 9.35em;
+    line-height: 0.935em;
+    max-width: 50vw;
+   text-transform: uppercase;
+   color:white;
+   transition: all 0.2s ease-in-out;
+  }
+
+  .hero-gig-link h1:hover {
+    opacity:0.7;
+  }
+
+  .todays-events-swiper h2{
+    font-size: 4.5rem;
+    color: #f1b0c4;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 9em; 
+    transform: rotate(270deg);
+    transform-origin: 27% 0%;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+
+  .swiper-slide:first-of-type h2{
+    margin-top: 7em; 
+    transform-origin: 27% 160%;
+  }
+
+  #home-hero .todays-description {
+    padding-top: 1.5em;
+    font-size: 2.6em;
+    max-width: 35vw;
+    line-height: 1.3em;
+    font-weight:200;
+  }
+
+  #home-hero .cta-btn {
+    display:inline-block;
+    padding:0.85em 1.35em;
+    border: 1px solid white;
+    font-size: 1.9em;
+    border-radius:0.5em;
+    margin-top:2.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color:white;
+    transition: all 0.2s ease-in-out;
+  }
+
+  #home-hero .cta-btn:hover {
+    color:#302f83;
+    background-color: white;
+  }
+
+
+  /*--------------------------------------comic page*/
+
+  .comic-profile-image {
+    border-radius:100%;
+    width:200px;
+    height:200px;
+  }
+
+  /*--------------------------------------upcoming shows page*/
+
+
+  .calendar-widget-table tbody .hasEvent {
+    background-color: grey;
+    color:white;
+  }
+
+  /*footer*/
+  footer {
+    display:none;
+  }
+
+  .footer-copyright {
+    text-align:center;
+  }
+
+  /*.valSilverStripe_WellingtonComedy_ComedianHolder {
+    display:none!important;
+  }
+  */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
