@@ -10,5 +10,5 @@ class ComedianHolder extends Page
       ComedianPage::class
     ];
 
-   private static $icon_class = 'font-icon-happy';
+   private static $icon_class = 'font-icon-torsos-all';
 }
