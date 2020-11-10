@@ -14,13 +14,13 @@
                                    <% if $SliderImage %>
                                         <div class="swiper-slide" class="image-contained-slide" style="background: url($SliderImage.Link) no-repeat; background-size: contain; background-position: 80% 100%;">
                                         <% else %>
-                                        <div class="swiper-slide" class="image-contained-slide" style="background: grey; background-size: contain; background-position: 80% 100%;">
+                                        <div class="swiper-slide" class="image-contained-slide" style="background: url($DefaultImage.Link) no-repeat; background-size: contain; background-position: 80% 100%;">
                                    <% end_if %>
                                    <h2>LIVE COMEDY</h2>
                                    <div class="hero-subheader"><i class="fas fa-caret-right"></i> FEATURED TONIGHT</div>
                                    <a href="$Link"><h1 class="hero-gig-link">$Title</h1></a>
                                    <div class="todays-description">$ShortBlurb</div>
-                                   <a href="$TicketLink"><div class="cta-btn">Book tickets</div></a>
+                                   <a href="$TicketLink"><div class="cta-btn">get tickets</div></a>
                                    </div>
                               <% end_loop %>
                          <% end_if %>
@@ -30,13 +30,13 @@
                                    <% if $SliderImage %>
                                         <div class="swiper-slide" class="image-contained-slide" style="background: url($SliderImage.Link) no-repeat; background-size: contain; background-position: 80% 100%;">
                                         <% else %>
-                                        <div class="swiper-slide" class="image-contained-slide" style="background: grey; background-size: contain; background-position: 80% 100%;">
+                                        <div class="swiper-slide" class="image-contained-slide" style="background: url($DefaultImage.Link) no-repeat; background-size: contain; background-position: 80% 100%;">
                                    <% end_if %>
                                    <h2>LIVE COMEDY</h2>
                                    <div class="hero-subheader"><i class="fas fa-caret-right"></i> WHAT’S ON TONIGHT</div>
                                    <a href="$Link"><h1 class="hero-gig-link">$Title</h1></a>
                                    <div class="todays-description">$ShortBlurb</div>
-                                   <a href="$TicketLink"><div class="cta-btn">Book tickets</div></a>
+                                   <a href="$TicketLink"><div class="cta-btn">get tickets</div></a>
                                    </div>
                               <% end_loop %>
                          <% end_if %>
