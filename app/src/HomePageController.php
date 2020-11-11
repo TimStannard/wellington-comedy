@@ -47,4 +47,22 @@ class HomePageController extends PageController
 		}
 		return $r;
 	}
+
+	public function GetWeekEvents()
+	{	
+		$ce = CalendarEvent::get();
+		$r = new ArrayList();	
+		foreach( $ce as $e ){
+			if ($e){
+				foreach($e->DateTimes() as $dt) {
+					$date = $dt->dbObject('StartDate');
+					if($date->InFuture()){ 
+						$r->push($dt);
+					} 
+				}			
+			}
+		}
+		$sorted = $r->sort('StartDate ASC');
+		return $sorted;
+	}
 }

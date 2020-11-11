@@ -65,11 +65,32 @@
           </div>
      </div>
 </div>
-<div id="home-week-ofit">
+<div id="home-week-ofit" class="page-section">
      <div class="container-fluid">
           <div class="row">
                <div class="col">
-                    <h2>A week of it</h2>
+                    <div class="upcoming-header">
+                         <img src ="img/calendaricon.jpg" alt="calendar">
+                         <h3>Upcoming shows</h3>
+                          <%-- <h4>A Week of it</h4> --%>
+                    </div>
+                    <% if $GetWeekEvents %>
+                         <% loop $GetWeekEvents.Limit(3) %>
+                         <div class="col upcoming-event">
+                              <% if $Image %>
+                                   <%-- $Image.ScaleWidth(200) --%>
+                              <% end_if %>
+                              <a href="$Link"><h1 class="gig-link">$Title</h1></a>
+                              <p style="color:white;font-size:3em">$StartDate</p>
+                              <p>$Day</p>
+                              <div class="todays-event-blurb non-mobile">$ShortBlurb</div>
+                              <a href="$Link"><div class="cta-btn">Read more...</div></a>
+                         </div>
+                         <% end_loop %>
+                         <% else %>
+                    <h1>No upcoming events. Check back soon!</h1>
+                    <% end_if %>
+                    </div>
                </div>
           </div>
      </div>
