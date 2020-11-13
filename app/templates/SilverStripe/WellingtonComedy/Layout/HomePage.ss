@@ -56,7 +56,6 @@
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination wow fadeIn" data-wow-delay="0.4s"></div>
-
                         <!-- If we need navigation buttons -->
                         <div class="swiper-button-prev wow fadeIn" data-wow-delay="0.4s"></div>
                         <div class="swiper-button-next wow fadeIn" data-wow-delay="0.4s"></div>
