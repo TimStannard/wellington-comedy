@@ -1,7 +1,7 @@
- <nav id="nav-container" class="nav navbar-expand-lg fixed-top custom-navbar">
+ <nav id="nav-container" class="nav navbar-expand-lg fixed-top custom-navbar closed">
      <a id="navbar-brand" href="$AbsoluteBaseURL"><img src="img/beehive-logo.jpg" alt="the wellington beehive"></a>
    <!-- Collapse button -->
-  <button class="navbar-toggler" id="nav-hamburger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  <button class="navbar-toggler ready-to-click" id="nav-hamburger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <div class="animated-icon"><span></span><span></span><span></span><span></span></div>
   </button>
@@ -12,5 +12,6 @@
           <li><a class="$LinkingMode underline-wave" href="$Link" title="Go to the $Title page">$MenuTitle</a></li>
           <% end_loop %>
        </ul>
-</div>
+       <%-- <div id="mobile-wavy-menu"></div> --%>
+  </div>
 </nav>

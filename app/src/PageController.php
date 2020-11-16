@@ -84,6 +84,7 @@ use SilverStripe\Control\Email\Email;
             Requirements::javascript('js/smoothscroll.js');
             Requirements::javascript('js/wow.min.js');
             Requirements::javascript('js/custom.js');
+            Requirements::javascript('js/debounce.min.js');
         }
 
     }
