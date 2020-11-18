@@ -1,4 +1,4 @@
-<%-- <footer>
+<div id="footer">
      <div class="container">
           <div class="row">
                <div class="col-md-12 col-sm-12">
@@ -7,13 +7,13 @@
                     
                     | Design: <a href="http://www.timothystannard.com" target="_parent">Tim Stannard</a></p>
                     </div>
-                    <ul class="social-icon">
+                    <%-- <ul class="social-icon">
                          <li><a href="mailto:stannard.tim@gmail.com" class="fa fa-envelope"></a></li>
                          <li><a href="https://github.com/TimStannard" class="fa fa-github"></a></li>
                          <li><a href="https://www.linkedin.com/in/tim-stannard/" class="fa fa-linkedin"></a></li>
-                    </ul>
+                    </ul> --%>
                </div>
                
           </div>
      </div>
-</footer> --%>
+</div>
