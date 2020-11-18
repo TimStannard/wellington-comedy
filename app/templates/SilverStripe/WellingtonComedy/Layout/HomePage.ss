@@ -74,14 +74,15 @@
 	<div id="home-week-ofit" class="page-section">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col">
+				<div class="col-md-12">
 					<div class="upcoming-header">
 						<%-- <img src ="img/calendaricon.jpg" alt="calendar"> --%>
 						<h3>coming up</h3>
 						<%-- <h4>A Week of it</h4> --%>
 					</div>
+				</div>
 					<% if $GetWeekEvents %>
-					<% loop $GetWeekEvents.Limit(6) %>
+					<% loop $GetWeekEvents.Limit(4) %>
 					<div class="col-sm-3 upcoming-event">
 						<% if $Image %>
 						$Image
