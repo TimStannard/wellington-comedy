@@ -51,7 +51,7 @@
 					<% if not $TodaysEvents && not $TodaysFeaturedEvents%>
 						<div class="swiper-slide" class="image-contained-slide" style="background: url($HomeImage.Link) no-repeat; background-size: cover; background-position: 100% 100%;">
 							<h2 id="default-hero-h2">LOCAL TALENT</h2>
-							<div class="hero-subheader">WELCOME TO</div>
+							<div class="hero-subheader wavy">WELCOME TO</div>
 							<h1>Wellington Comedy</h1>
 							<div class="todays-event-blurb">$HomePageBlurb</div>
 							<a href="{$BaseURL}upcoming-shows">
@@ -71,7 +71,7 @@
 		</div>
 	</div>
 </div>
-<div id="home-week-ofit" class="page-section">
+<div id="home-week-ofit" class="page-section squeeze-in">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">

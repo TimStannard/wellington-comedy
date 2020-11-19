@@ -366,7 +366,7 @@ p.sm {
 /*--------------------------------------home page*/
 
 #home-hero {
-  padding-bottom: 7em;
+  padding-bottom: 6em;
 }
 
 .swiper-container {
@@ -456,7 +456,7 @@ p.sm {
 }
 
 .swiper-slide:first-of-type h2 {
-  margin-top: 7em;
+  margin-top: 6em;
   transform-origin: 27% 160%;
 }
 
@@ -529,16 +529,16 @@ h2 {
 /*upcoming home events*/
 
 .page-section {
-  padding: 7em 0 3.5em 0;
+  padding: 6em 0 3.5em 0;
 }
 
 .page-section.equal {
-  padding: 7em 0 7em 0;
+  padding: 6em 0 6em 0;
 }
 
 .upcoming-header {
   margin: 0 auto;
-  padding-bottom: 2.375em;
+  /*padding-bottom: 2.375em;*/
 }
 
 .upcoming-header img {
@@ -629,11 +629,11 @@ h2 {
 
 #upcoming-hero {
   margin-top:7em;
-  padding-top: 7em;
+  padding-top: 6em;
   text-align: center;
-  padding-bottom:7em;
-  background: url("../img/upcoming-bg.jpg") no-repeat; 
-  background-position: 0% 60%;
+  padding-bottom:6em;
+  background: url("../img/contact-bg.jpg") no-repeat; 
+  background-position: 0% 50%;
   background-size:cover;
   /*box-shadow: inset 0px 230px 220px 0px #00000014;*/
   margin-bottom:2em;
@@ -708,6 +708,7 @@ h2 {
 #upcoming-calendar table {
   border-collapse: separate;
   border-spacing: 2px;
+  font-weight: 300;
 }
 
 #upcoming-calendar .out-of-month {
@@ -722,10 +723,11 @@ h2 {
 }
 
 #upcoming-calendar .out-of-month.hasEvent {
- border: 1px solid #f1b0c4;
+ border: 1px solid #f1b0c473;
     background-color: #302f83;
     color: white;
 }
+
 /*------------------------------------------------*/
 
 
@@ -883,7 +885,7 @@ h2 {
     animation-timing-function: ease;
   }
   .swiper-slide:first-of-type h2 {
-    margin-top: 7em;
+    margin-top: 6em;
     transform-origin: 27% 160%;
   }
   #home-hero .cta-btn {
@@ -928,12 +930,41 @@ h2 {
 
 /* Medium devices (landscape tablets, 768px and up) */
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+
+  /*general*/
+
+  .page-section.squeeze-in {
+    padding:7em 7em 3.5em 7em;
+  }
+
+  /*-----------------------------home page*/
+  h2 {
+    font-size:4em;
+    padding-bottom:0.5em;
+  }
+  .swiper-container {
+    padding-top:11em;
+    margin-top:0;
+  }
+
+  .swiper-slide:first-of-type h2 {
+    margin-top: 6em;
+    transform-origin: 36.5% 160%;
+  }
+
+  #home-hero {
+
+  }
+
+}
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
