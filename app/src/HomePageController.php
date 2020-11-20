@@ -51,23 +51,27 @@ class HomePageController extends PageController
 	public function GetWeekEvents()
 	{	
 		$ce = CalendarEvent::get();
-		$dtime = strtotime("01/02/2021");
 		$r = new ArrayList();	
 		foreach( $ce as $e ){
-			if ($e){      									//for each event
-				foreach($e->DateTimes() as $dt) { 			//loop over date times of event
-					$date = $dt->dbObject('StartDate');		//loop over each date as $date
-					if($date->InFuture() && $date < $dtime ){ 					
+			if ($e){      
+				$grabbed = false;								
+				foreach($e->DateTimes() as $dt) { 			
+					$date = $dt->dbObject('StartDate');			
+					if($date->InFuture() && $grabbed == false ){ 
+						$grabbed = true;				
 						$r->push($dt);
 					} 
 				}			
 			}
 		}
+
 		// loop over all $r and filter by earliest date
 		$sorted = $r->sort('StartDate ASC');
 		return $sorted;
 	}
 }
+
+// if($date->InFuture() && $e->ID < 25 ){ 					
 
 // $ce = CalendarEvent::get()->filter(['Title' => 'Raw Meat Monday']);
 
