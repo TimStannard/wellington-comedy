@@ -6,9 +6,11 @@ use Page;
 
 class ComedianHolder extends Page 
 {
-   private static $allowed_children = [
-      ComedianPage::class
-    ];
+	private static $allowed_children = [
+	  ComedianPage::class
+	];
 
-   private static $icon_class = 'font-icon-torsos-all';
+	private static $icon_class = 'font-icon-torsos-all';
+
+
 }

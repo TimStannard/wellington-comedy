@@ -4,7 +4,7 @@
 	<div class="row no-gutters">
 		<div class="col">
 			<!-- Slider main container -->
-			<div class="swiper-container todays-events-swiper hero">
+			<div class="swiper-container todays-events-swiper">
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					<!-- Slides -->
@@ -76,16 +76,14 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="upcoming-header">
-					<%-- <img src ="img/calendaricon.jpg" alt="calendar"> --%>
 					<h2>coming up</h2>
-					<%-- <h4>A Week of it</h4> --%>
 				</div>
 			</div>
 				<% if $GetWeekEvents %>
 				<% loop $GetWeekEvents.Limit(4) %>
 				<div class="col-sm-3 upcoming-event">
 					<% if $Image %>
-					$Image
+					<a href="$Link">$Image</a>
 					<% end_if %>
 					<div class="upcoming-text-container">
 						<a href="$Link">

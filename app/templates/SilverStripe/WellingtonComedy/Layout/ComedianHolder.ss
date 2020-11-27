@@ -1,12 +1,17 @@
 <!-- Hero Section -->
-<section id="comedians-holder-hero" class="hero-section" style="border:1px solid white; margin-top:30px; padding:20px;">
+<div id="comedians-holder-hero" class="hero">
+     <h4>Local and touring</h4>
+    <h1 class="white">$Title</h1>   
+</div>
+<%-- holder list --%>
+<div id="comedian-holder-list">
      <div class="container-fluid">
           <div class="row">
-                    <% loop $Children %>
-                    <div class="col-md-4 col-sm-4" style="">
+          <% loop $ShowChildren %>
+               <div class="col-md-4 comedian-list-item">
                          <% if $Photo %>
                         <a href="$Link">
-                              <% with $Photo.Fit(200,200) %>
+                              <% with $Photo.Fit(50,50) %>
                               <div>
                                    <img class="comic-profile-image" src="$URL" alt="" />
                               </div>
@@ -14,9 +19,30 @@
                               <% end_with %>
                          <% end_if %>
 
-                    <a href="$Link">$Title</a>
-                    </div>
-                    <% end_loop %>
+                    <a href="$Link"><p class="sm">$Title</p></a>
+               </div>
+          <% end_loop %>
+          <% if $ShowChildren.MoreThanOnePage %>
+               <div id="comedians-pagination" class="col-12">
+                   <% if $ShowChildren.NotFirstPage %>
+                       <a class="pag-prev" href="$ShowChildren.PrevLink">Prev</a>
+                   <% end_if %>
+                   <% loop $ShowChildren.PaginationSummary %>
+                       <% if $CurrentBool %>
+                           $PageNum
+                       <% else %>
+                           <% if $Link %>
+                               <a href="$Link">$PageNum</a>
+                           <% else %>
+                               ...
+                           <% end_if %>
+                       <% end_if %>
+                   <% end_loop %>
+                   <% if $ShowChildren.NotLastPage %>
+                       <a class="pag-next" href="$ShowChildren.NextLink">Next</a>
+                   <% end_if %>
+               </div>
+          <% end_if %>
           </div>
      </div>
-</section>
+</div>
