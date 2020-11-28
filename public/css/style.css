@@ -935,8 +935,10 @@ p.no-events {
 
 .comedian-list-item img {
     border-radius: 0.5em;
-    margin: 0 1em 0 0;
+    margin: -0.40em 1em 0 0;
     float:left;
+    transition: all 0.2s ease-out;
+    border: 1px solid #ffffff30;
 }
 
 .comedian-list-item p {
@@ -944,13 +946,22 @@ p.no-events {
 }
 
 .comedian-list-item {
-  padding:0.5em;
-  margin-bottom:0.25em;
+  padding:0.5em 0;
+  border-bottom: 1px solid #ffffff14;
+  margin-bottom:0.5em;
+}
+
+.accordion-content.open .comedian-list-item {
+  padding:0.5em 0 1.5em 0;
   border-bottom: 1px solid #ffffff14;
 }
 
-/*pagination*/
+#comedian-holder-list {
+  padding:1.5em 0;
+}
 
+/*pagination*/
+/*
 #comedians-pagination {
   text-align:center;
   font-size:1.5em;
@@ -959,9 +970,37 @@ p.no-events {
 }
 
 #comedians-pagination a {
-  /*margin-right:1em;*/
+  margin-right:1em;
   padding:0.25em 0.35em 0.35em 0.35em;
   border:1px solid white;
+}
+*/
+
+/*accordian*/
+
+.accordion {
+  font-size:1.5em;
+  font-weight:600;
+  padding:0.6em;
+  border-radius: 0.5em;
+  border: 1px solid white;
+  margin:0 0.5em 0.25em 0.5em;
+}
+
+.accordion-content {
+  max-height:0;
+  width:100%;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
+  padding:0 1em;
+}
+
+.accordion-content {
+  opacity:0;
+}
+.accordion-content.open {
+ opacity:1;
+ padding-bottom:0.5em;
 }
 
 /*------------------------------comedian profile page*/
@@ -974,6 +1013,23 @@ p.no-events {
 
 #comedian-profile-container .comic-profile-img{
   text-align:center;
+}
+
+#comedian-profile-container img {
+  border-radius:0.5em;
+  border: 1px solid #ffffff30;
+  margin:3em 0;
+}
+
+.comic-profile-description {
+  text-align:center;
+}
+.comic-profile-description .comic-short-blurb {
+  font-size:1.5em;
+}
+
+.comic-short-blurb {
+  font-weight: 700;
 }
 
 /*------------------------------------------------*/
@@ -1210,6 +1266,13 @@ p.no-events {
 
   #home-hero {
 
+  }
+
+  /*----------------------comedian holder page*/
+
+  .comedian-list-item img {
+    width:50px;
+    height:50px;
   }
 
 }

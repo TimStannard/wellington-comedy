@@ -11,11 +11,14 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Assets\File;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use UncleCheese\EventCalendar\Models\CalendarDateTime;
-
+use SilverStripe\ORM\GroupedList;
 use Page; 
 
 class ComedianPage extends Page 
-{
+{   
+    public function getChildFirstLetter() {
+        return $this->Title[0];
+    }
 
     public function CurrentPageURL()
     {
