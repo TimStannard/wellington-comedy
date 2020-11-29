@@ -2,29 +2,42 @@
 
 namespace SilverStripe\WellingtonComedy;
 
-use PageController;    
 
-class ComedianController extends PageController
+use UncleCheese\EventCalendar\Pages\CalendarEvent;  
+use UncleCheese\EventCalendar\Models\CalendarDateTime;
+use SilverStripe\ORM\ArrayList;
+use PageController;  
+
+class ComedianPageController extends PageController
 {
 
-	public function GetComicEvents()
-	{	
-		$ce = CalendarEvent::get()->filter([
-		'DateTimes.StartTime:GreaterThan' => time(),
-		'IsFeatured' => true
-		]);
+ public function GetComedianEvents()
+ 	{	
+		$ce = CalendarEvent::get();
 		$r = new ArrayList();	
 		foreach( $ce as $e ){
-			if ($e){
-				foreach($e->DateTimes() as $dt) {
+			if ($e){      							
+				foreach($e->DateTimes() as $dt) { 			
 					$date = $dt->dbObject('StartDate');
-					if($date->IsToday()){ 
-						$r->push($dt);
-					} 
-				}			
+					$cpages = $dt->DateTimeComics();			
+					if($date->InFuture()){ 	
+						foreach( $cpages as $c ){
+							if($c){
+								$cname = $c->dbObject('Title');
+								foreach($cname as $ctitle) {
+									if ($cname == $this->Title){
+										$r->push($dt);
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
 			}
-		}
-		return $r;
+		$sorted = $r->sort('StartDate ASC');
+		return $sorted;
 	}
-
 }
+
+

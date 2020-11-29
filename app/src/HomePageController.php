@@ -70,11 +70,3 @@ class HomePageController extends PageController
 		return $sorted;
 	}
 }
-
-// if($date->InFuture() && $e->ID < 25 ){ 					
-
-// $ce = CalendarEvent::get()->filter(['Title' => 'Raw Meat Monday']);
-
-// echo '<script type="text/javascript">
-// console.log("test");
-// </script>'; 

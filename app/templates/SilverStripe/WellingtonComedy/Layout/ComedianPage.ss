@@ -1,10 +1,42 @@
 <!-- Hero Section -->
-<!-- Hero Section -->
 <div id="comedian-profile-hero" class="hero">
 		 <h4>Comedian profile</h4>
 		<h1 class="white">$Title</h1>   
 </div>
-
+<div id="home-week-ofit" class="page-section squeeze-in">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="upcoming-header">
+					<h2>coming up</h2>
+				</div>
+			</div>
+			<% if $ComedianEvents %>
+				<% loop $ComedianEvents %>
+				<div class="col-sm-3 upcoming-event">
+					<% if $Image %>
+					<a href="$Link">$Image</a>
+					<% end_if %>
+					<div class="upcoming-text-container">
+						<a href="$Link">
+							<h4 class="gig-link wavy">$Title</h4>
+						</a>
+						<p class="event-date">$DateRange</p>
+						<p class="todays-event-blurb sm">$ShortBlurb.LimitCharacters(180)</p>
+						<a href="$Link">
+							<div class="cta-btn sm">Read more</div>
+						</a>
+					</div>
+				</div>
+				<% end_loop %>
+				<% else %>
+				<h1>No upcoming events. Check back soon!</h1>
+			<% end_if %>
+			</div>
+		</div>
+	</div>
+</div>
+<%-- comic profile section --%>
 <div id="comedian-profile-container">
  <div class="container-fluid">
 	<div class="row">
@@ -17,13 +49,13 @@
 				 <p class="comic-short-blurb">$Blurb</p>
 				 <p class="sm">$Profile</p>
 		</div>
-		<% if $GetComicEvents %>
+		<%-- <% if $ComedianEvents %>
 		<div class="col-md-12">
 				<div class="upcoming-header">
 					<h2>coming up</h2>
 				</div>
-		</div>
-		<% loop $GetComicEvents %>
+		</div> --%>
+		<%-- <% loop $ComedianEvents %>
 		<div class="col-sm-3 upcoming-event">
 			<% if $Image %>
 			<a href="$Link">$Image</a>
@@ -39,7 +71,7 @@
 				</a>
 			</div>
 		</div>
-		<% end_loop %>
+		<% end_loop %> --%>
 		</div>
 	 </div>
 </div>
