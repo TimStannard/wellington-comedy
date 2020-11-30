@@ -11,6 +11,9 @@ use Page;
 
 class HomePage extends Page 
 {
+
+  private static $table_name = 'HomePageData';
+
 	private static $db = [
         'HomePageBlurb' => 'Text'
     ];

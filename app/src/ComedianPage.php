@@ -31,7 +31,7 @@ class ComedianPage extends Page
 
     private static $db = [
         'Blurb' => 'Text',
-        'Profile' => 'Text',
+        'Profile' => 'HTMLText',
     ];
 
     private static $belongs_many_many = array(
@@ -60,7 +60,7 @@ class ComedianPage extends Page
     	$fields->addFieldToTab('Root.Main', TextField::create('Blurb','Short blurb')
     		->setDescription('E.g. Winner of Raw Quest 2020'), 'Content');  
 
-    	$fields->addFieldToTab('Root.Main', TextareaField::create('Profile','Profile info')
+    	$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Profile','Profile info')
     		->setDescription('Longer profile and bio'), 'Content');  
 
         $fields->addFieldToTab('Root.Main', $photo =UploadField::create('Photo','Headshot photo'), 'Metadata');
