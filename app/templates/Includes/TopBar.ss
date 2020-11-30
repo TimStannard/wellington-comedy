@@ -7,11 +7,11 @@
   </button>
   <%--  Page links --%>
   <div class="collapse justify-content-end navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav" id="nav-links">
+        <ul class="nav navbar-nav" id="nav-links">
           <% loop $Menu(1) %>
           <li><a class="$LinkingMode underline-wave" href="$Link" title="Go to the $Title page">$MenuTitle</a></li>
           <% end_loop %>
+          $SearchForm
        </ul>
-       <%-- <div id="mobile-wavy-menu"></div> --%>
   </div>
 </nav>

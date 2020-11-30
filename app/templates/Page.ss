@@ -11,6 +11,7 @@
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
      <% include TopBar %>
+     <div id="results-target"></div>
      $Layout
      <% include Footer %> 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> 
