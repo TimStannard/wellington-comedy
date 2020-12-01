@@ -6,7 +6,6 @@ use SilverStripe\View\Requirements;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-
 use Page; 
 
 class HomePage extends Page 

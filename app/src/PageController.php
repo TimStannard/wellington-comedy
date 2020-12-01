@@ -14,10 +14,29 @@ use SilverStripe\Forms\Form;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Control\Email\Email;
 
+use SilverStripe\ORM\ArrayLib;
+
     class PageController extends ContentController
     {
 
         private static $allowed_actions = ['ContactForm'];
+
+        public function SearchForm() 
+        { 
+            $fields = new FieldList( 
+                TextField::create('Keywords','')->setAttribute('placeholder', 'Search'),
+            ); 
+            $actions = new FieldList( 
+                new FormAction('submit', 'Submit') 
+            ); 
+
+            $form = Form::create($this, 'SearchForm', $fields, $actions);
+            $form->setFormMethod('GET')
+                ->setFormAction("search-results", "See the results page")
+                ->disableSecurityToken()
+                ->loadDataFrom($this->request->getVars());
+            return $form;
+        }
 
         public function ContactForm() 
         { 
