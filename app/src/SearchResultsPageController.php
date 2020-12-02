@@ -16,6 +16,7 @@ class SearchResultsPageController extends PageController
     {
         $comedians = ComedianPage::get();
 		$ce = CalendarEvent::get();
+		$keywords = $request->getVar('Keywords');
 
        if ($search = $request->getVar('Keywords')) {
     		$ce = $ce->filter([
@@ -46,7 +47,8 @@ class SearchResultsPageController extends PageController
 
         return [
             'Comics' => $comedians,
-            'Events' => $sortedevents
+            'Events' => $sortedevents,
+            'Keywords' => $keywords
         ];
     }
     

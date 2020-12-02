@@ -1,24 +1,34 @@
-<div id="home-week-ofit" class="page-section squeeze-in" style="margin-top:90px;">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="upcoming-header">
-					<h2>Search results</h2>
-				</div>
-					<% loop $Comics %>
-						<div class="col">
-						<a href="$Link">$Photo.Fit(200,200)
-					    $Title</a>
-						</div>
-					<% end_loop %>
-					<% loop $Events %>
-						<div class="col">
-						<a href="$Link">$Image.Fit(200,200)
-					    $Title</a>
-						</div>
-					<% end_loop %>
-				</div>
-			</div>
-		</div>
-	</div>
+<%-- hero --%>
+<div id="searchresults-hero" class="hero">
+	<h2>Search results</h2>
+	<p>Showing results for "$Keywords"	
 </div>
+				
+<%-- results list --%>
+<div id="searchresults-list" class="large-search-container">
+     <div class="container-fluid">
+        <div class="row">
+        <% if $Comics %>
+          <% loop $Comics %>
+			<div class="col">
+			<a href="$Link">$Photo.Fit(200,200)
+		    $Title</a>
+			</div>
+		<% end_loop %>
+		<% end_if %>
+		<% if $Events %>
+		<% loop $Events %>
+			<div class="col">
+			<a href="$Link">$Image.Fit(200,200)
+		    $Title</a>
+			</div>
+		<% end_loop %>
+		<% end_if %>
+		 <% if not $Comics && not $Events %>
+		 <p class="error-search">Whoops, we couldn't find any matches. Try using some different search words?</p>
+		 $SearchForm
+		 <% end_if %>
+        </div>
+     </div>
+  </div>
+<div>

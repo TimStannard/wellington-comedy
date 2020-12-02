@@ -4,16 +4,19 @@
     <h1 class="white">$Title</h1>   
 </div>
 <%-- holder list --%>
-<div id="comedian-holder-list" class="">
+<div id="comedian-holder-list">
      <div class="container-fluid">
           <div class="row">
+            <div class="col-md-12 large-search-container">
+                 $SearchForm
+            </div>
           <% loop $GroupedChildren.GroupedBy(ChildFirstLetter) %>
                <button class="col-md-12 comedian-first-letter accordion">
                     $ChildFirstLetter
                </button>
                <div class="accordion-content">
                <% loop $Children %>
-                    <div class="col-md-4 comedian-list-item">
+                    <div class="col comedian-list-item">
                          <% if $Photo %>
                         <a href="$Link">
                               <% with $Photo.Fit(50,50) %>

@@ -27,14 +27,14 @@ use SilverStripe\ORM\ArrayLib;
                 TextField::create('Keywords','')->setAttribute('placeholder', 'Search'),
             ); 
             $actions = new FieldList( 
-                new FormAction('submit', 'Submit') 
+            new FormAction('submit', 'Search') 
             ); 
-
             $form = Form::create($this, 'SearchForm', $fields, $actions);
             $form->setFormMethod('GET')
                 ->setFormAction("search-results", "See the results page")
                 ->disableSecurityToken()
                 ->loadDataFrom($this->request->getVars());
+            $form->setTemplate('SearchFormTemplate');
             return $form;
         }
 
