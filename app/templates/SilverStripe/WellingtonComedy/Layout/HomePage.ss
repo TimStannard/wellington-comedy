@@ -80,23 +80,23 @@
 				</div>
 			</div>
 				<% if $GetWeekEvents %>
-				<% loop $GetWeekEvents.Limit(4) %>
-				<div class="col-sm-3 upcoming-event">
-					<% if $Image %>
-					<a href="$Link">$Image</a>
-					<% end_if %>
-					<div class="upcoming-text-container">
-						<a href="$Link">
-							<h4 class="gig-link wavy">$Title</h4>
-						</a>
-						<p class="event-date">$DateRange</p>
-						<p class="todays-event-blurb sm">$ShortBlurb.LimitCharacters(180)</p>
-						<a href="$Link">
-							<div class="cta-btn sm">Read more</div>
-						</a>
-					</div>
-				</div>
-				<% end_loop %>
+					<% loop $GetWeekEvents.Limit(4) %>
+						<div class="col-sm-3 upcoming-event">
+							<% if $Image %>
+								<a href="$Link">$Image</a>
+							<% end_if %>
+							<div class="upcoming-text-container">
+								<a href="$Link">
+									<h4 class="gig-link wavy">$Title</h4>
+								</a>
+								<p class="event-date">$DateRange</p>
+								<p class="todays-event-blurb sm">$ShortBlurb.LimitCharacters(180)</p>
+								<a href="$Link">
+									<div class="cta-btn sm">Read more</div>
+								</a>
+							</div>
+						</div>
+					<% end_loop %>
 				<% else %>
 				<h1>No upcoming events. Check back soon!</h1>
 				<% end_if %>

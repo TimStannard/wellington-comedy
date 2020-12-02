@@ -45,11 +45,35 @@ class SearchResultsPageController extends PageController
     		]);
 		}
 
-        return [
+		$numberresults = count($comedians) + count($sortedevents);
+		$noresult = null;
+		if ($numberresults == 1){
+			$singleresult = true;
+			$manyresult = false;
+		} else if ($numberresults > 1) {
+			$singleresult = false;
+			$manyresult = true;
+		} else {
+			$noresult = true;
+		}
+
+		if (!$noresult) {
+			return [
             'Comics' => $comedians,
             'Events' => $sortedevents,
+            'Keywords' => $keywords,
+            'ResultsCount' => $numberresults,
+            'SingleResult' => $singleresult,
+            'ManyResult' => $manyresult
+        	];
+
+		}else {
+			return [
+            'NoResult' => $noresult,
             'Keywords' => $keywords
-        ];
+        	];
+		}
+        
     }
     
 }

@@ -29,7 +29,10 @@ use SilverStripe\ORM\ArrayLib;
             $actions = new FieldList( 
             new FormAction('submit', 'Search') 
             ); 
-            $form = Form::create($this, 'SearchForm', $fields, $actions);
+            $required = new RequiredFields([
+            'Keywords'
+            ]);
+            $form = Form::create($this, 'SearchForm', $fields, $actions, $required);
             $form->setFormMethod('GET')
                 ->setFormAction("search-results", "See the results page")
                 ->disableSecurityToken()

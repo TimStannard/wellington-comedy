@@ -14,7 +14,7 @@
 			<div class="col-md-8 comic-profile-description lato">
 				<h1 class="wavy">$Title</h1>   
 				<p class="comic-short-blurb">$Blurb</p>
-				<div class="sm">$Profile</div>
+				<div id="comic-profile-text">$Profile</div>
 			</div>
 		</div>
 	</div>
