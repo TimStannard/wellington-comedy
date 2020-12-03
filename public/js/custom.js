@@ -1,20 +1,10 @@
-/*-------------------------------------------------------------------------------
-  PRE LOADER
--------------------------------------------------------------------------------*/
 $(window).load(function() {
-    $('.preloader').fadeOut(1000); // set duration in brackets    
+    $('.preloader').fadeOut(1000); 
 });
-
-
-
-/* HTML document is loaded. DOM is ready. 
--------------------------------------------*/
 
 $(document).ready(function() {
 
-
     // accordian
-
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -32,7 +22,6 @@ $(document).ready(function() {
     }
 
     // swiper slider
-
     if($('.swiper-container .swiper-slide').length == 1 ) {
       $('.swiper-wrapper').addClass( "disabled" );
       $('.swiper-pagination').addClass( "disabled" );

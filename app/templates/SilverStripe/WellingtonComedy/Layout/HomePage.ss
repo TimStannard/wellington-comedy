@@ -71,7 +71,7 @@
 		</div>
 	</div>
 </div>
-<div id="home-week-ofit" class="page-section squeeze-in">
+<div id="home-week-ofit" class="page-section squeeze-in light-bg">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -105,4 +105,4 @@
 	</div>
 </div>
 
-<% include ContactBanner %> 
+<% include ContactMinimalBanner %> 

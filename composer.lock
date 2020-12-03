@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf0cc5ec42e155bb75414a9ba09bb770",
+    "content-hash": "3a7e116eefb2b84655e5449232771c04",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -297,16 +297,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.4.9",
+            "version": "v3.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "43da4ebcae61f4acf44e1b89436c2912a4b38f60"
+                "reference": "3978fb9eb6a6e3240d034c1c3cfa9a24eb060768"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/43da4ebcae61f4acf44e1b89436c2912a4b38f60",
-                "reference": "43da4ebcae61f4acf44e1b89436c2912a4b38f60",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/3978fb9eb6a6e3240d034c1c3cfa9a24eb060768",
+                "reference": "3978fb9eb6a6e3240d034c1c3cfa9a24eb060768",
                 "shasum": ""
             },
             "require": {
@@ -314,11 +314,11 @@
                 "ext-curl": "*",
                 "ext-dom": "*",
                 "ext-mbstring": "*",
-                "php": "^5.6|^7.0"
+                "php": "^5.6|^7.0|^8.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.0",
-                "phpunit/phpunit": "^4.8|^5.7"
+                "phpunit/phpunit": "^5.7|^6.0|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -347,7 +347,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2020-10-27T21:42:10+00:00"
+            "time": "2020-12-01T18:36:06+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2323,6 +2323,61 @@
             "time": "2020-05-28T16:17:27+00:00"
         },
         {
+            "name": "silverstripe/spamprotection",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-spamprotection.git",
+                "reference": "dce36b8fe7ce65f0c073014e1d3a8f5dd7e019db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/dce36b8fe7ce65f0c073014e1d3a8f5dd7e019db",
+                "reference": "dce36b8fe7ce65f0c073014e1d3a8f5dd7e019db",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "silverstripe/versioned": "^1.0",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "images"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\SpamProtection\\": "code/",
+                    "SilverStripe\\SpamProtection\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Saophalkun Ponlu",
+                    "email": "phalkunz@silverstripe.com"
+                },
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "Spam protection module for SilverStripe.",
+            "keywords": [
+                "silverstripe",
+                "spamprotection"
+            ],
+            "time": "2019-11-20T08:18:27+00:00"
+        },
+        {
             "name": "silverstripe/vendor-plugin",
             "version": "1.5.1",
             "source": {
@@ -3173,6 +3228,60 @@
                 }
             ],
             "time": "2020-10-24T10:57:07+00:00"
+        },
+        {
+            "name": "undefinedoffset/silverstripe-nocaptcha",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/silverstripe-nocaptcha.git",
+                "reference": "655e1448ba575e0a7a6410ae101236908d363c73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/655e1448ba575e0a7a6410ae101236908d363c73",
+                "reference": "655e1448ba575e0a7a6410ae101236908d363c73",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~4.0",
+                "silverstripe/spamprotection": "~3.0",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "javascript"
+                ],
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "UndefinedOffset\\NoCaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A spam protector and form field using the new Google's reCAPTCHA 2 aka No Captcha",
+            "keywords": [
+                "nocaptcha",
+                "recaptcha",
+                "recaptcha2",
+                "silverstripe",
+                "spamprotection"
+            ],
+            "time": "2020-09-09T12:32:34+00:00"
         },
         {
             "name": "webonyx/graphql-php",

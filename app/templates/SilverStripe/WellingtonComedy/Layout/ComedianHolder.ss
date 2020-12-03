@@ -1,7 +1,7 @@
 <!-- Hero Section -->
 <div id="comedians-holder-hero" class="hero">
-	<h4>Local and touring</h4>
-	<h1 class="white">$Title</h1>   
+	<h4 class="title-preheading">Local and touring</h4>
+	<h1 class="banner-title">$Title</h1>   
 </div>
 <%-- holder list --%>
 <div id="comedian-holder-list">

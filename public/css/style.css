@@ -74,7 +74,7 @@ input[type="text"] {
 body {
   width: 100%;
   margin: 0 auto;
-  background: #302f83;
+  background: #21215f;;
   color: white;
 }
 
@@ -96,7 +96,9 @@ a:hover {
 /*------------------------------------------------*/
 
 
-/*text, headers, buttons, icons*/
+/*----------------used across all pages
+
+text, headers, buttons, icons*/
 
 h1,
 h2,
@@ -107,8 +109,37 @@ h4 {
   text-transform: uppercase;
 }
 
+h1, h2, h3, h4, a, p, div {
+  word-wrap: break-word;
+}
+
+ h2.small-header {
+  color:white;
+  margin-bottom:1.5em;
+  font-size:2.25em;
+}
+
+i.small-header {
+  font-size:3em;
+  color:#f1b0c4;
+  margin:0 0 0.75em 0;
+}
+
 .lato {
   font-family: Lato, Arial, sans-serif;
+}
+
+.regular-text {
+  font-size:1.5em;
+  font-weight:200;
+}
+
+.title-preheading {
+  letter-spacing: 0.05em;
+}
+
+.banner-title {
+  color:white;
 }
 
 a {
@@ -146,6 +177,10 @@ p.sm.bold{
 
 .shadow-blu, .hero {
   text-shadow: 0 0 0.25em #302F83, 0 0 0.25em #302F83;
+}
+
+.centered {
+  text-align:center;
 }
 
 /*navbar icon*/
@@ -259,7 +294,8 @@ p.sm.bold{
 
 #nav-container.mobile-menu-open {
   padding-bottom: 3.5em;
-  box-shadow: 0px 51px 57px -24px rgb(0 0 0 / 30%);
+  box-shadow: 0px 51px 57px -24px rgb(0 0 0 / 40%);
+  border-bottom: 1px solid #ffffff1c;
 }
 
 #mobile-wavy-menu {
@@ -300,7 +336,7 @@ p.sm.bold{
   font-size: 1.65em;
   letter-spacing: 0.031em;
   font-weight: 400;
-  padding: 1em 3em 0em 3em;
+  padding: 3em 3em 0em 3em;
 }
 
 #nav-links a {
@@ -324,7 +360,7 @@ p.sm.bold{
   text-align: center;
   width: 100%;
   max-width:10em;
-  margin: 0.5em auto 0 auto;
+  margin: 1em auto 0 auto;
 }
 
 #Form_SearchForm_Keywords {
@@ -376,9 +412,28 @@ p.sm.bold{
 
 .hero {
   margin:7em 0 0em 0;
-  padding:6em 0.5em;
+  padding:6em 1em;
   text-align: center;
   color:#f1b0c4;
+}
+
+/*lighter backgrounds*/
+
+.light-bg {
+  background: #35348e;
+}
+
+.regular-bg {
+  background:#302F83;
+}
+
+/*selection*/
+
+::selection {
+  background: #f1b0c4; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #f1b0c4; /* Gecko Browsers */
 }
 
 
@@ -403,6 +458,7 @@ p.sm.bold{
 
 #home-hero {
   padding-bottom: 6em;
+  background: #302f83;
 }
 
 .swiper-container {
@@ -572,6 +628,10 @@ h2 {
   padding: 6em 0;
 }
 
+.page-section-small {
+  padding: 5em 0;
+}
+
 .upcoming-header {
   margin: 0 auto;
   padding-bottom: 2em;
@@ -582,10 +642,6 @@ h2 {
   max-width: 50px;
   display: block;
   margin: 0 auto 2.5em auto;
-}
-
-#home-week-ofit, #comedian-upcoming-shows {
-  background: #ffffff0a;
 }
 
 .upcoming-event h4 {
@@ -789,7 +845,6 @@ h2 {
 }
 
 #upcoming-events {
-  background:#ffffff0a;
   text-align: center;
 }
 
@@ -915,7 +970,7 @@ p.no-events {
 
 .individual-event-details .ind-event-comics img {
   border-radius: 50%;
-  margin-bottom:2.75em;
+  margin-bottom:0.5em;
   margin-right:0.25em;
   border: 1px solid #ffffff30;
 }
@@ -951,12 +1006,16 @@ p.no-events {
   background-size:cover;
  }
 
+ #dateetimecomics-container {
+  padding-bottom:1em;
+ }
+
 .icon {
   margin-right:0.5em;
 }
 
 .venue-name {
-  margin-bottom:1.5em;
+  margin-top:0.25em;
 }
 .event-other-dates-title .icon
 {
@@ -966,9 +1025,17 @@ p.no-events {
 }
 
 .other-dates-container .dtstart:before{
-  content:"\279C\0000a0\0000a0";
+  content:"\2192\0000a0\0000a0";
   font-weight: 600;
   color: #f1b0c4;
+}
+
+#event-timedate-venue-container {
+  padding-bottom:1em;
+}
+
+.go-back-event-container {
+  padding-bottom:6em;
 }
 
 /*-------------------------------------comedian holder page*/
@@ -981,6 +1048,7 @@ p.no-events {
 
 #comedian-holder-list {
   padding:0 0.5em 0 0.5em;
+  background:#302F83;
 }
 
 .comedian-list-item img, #comedians-pagination a {
@@ -1134,8 +1202,8 @@ p.no-events {
 #results-number p {
   color:white;
   font-size:1.5em;
-  margin-bottom:1.5em;
-  padding-bottom:1em;
+  margin-bottom:0.25em;
+  padding-bottom:1.5em;
   border-bottom: 1px solid #ffffff14;
 }
 
@@ -1144,6 +1212,7 @@ p.no-events {
   text-align: center;
   font-size:1.5em;
   font-weight: 200;
+  padding-top:1em;
 }
 
 #searchresults-list {
@@ -1152,6 +1221,10 @@ p.no-events {
 
 #searchresults-list i{
   margin-right: 0.25em;
+}
+
+.sm-upcoming-gig-title {
+  padding-top:1.75em;
 }
 
 .large-search-container #Form_SearchForm {
@@ -1181,6 +1254,132 @@ p.no-events {
 
 #searchresults-list #Form_SearchForm {
   margin: 1em auto -1em auto;
+}
+
+/*-----------------------------about page*/
+
+#about-page-hero {
+  background: url("../img/about-bg.jpg") no-repeat; 
+  background-position: 50% 0%;
+  background-size:cover;
+}
+
+#about-content-container {
+  /*padding: 3em 0.5em;*/
+}
+
+.blurb-row {
+  text-align:center;
+  padding: 5em 0em;
+}
+.blurb-row i, .blurb-row h3 {
+  color: #f1b0c4;
+}
+
+.blurb-row i{
+  margin-bottom:0.5em;
+   font-size:3.5em;
+}
+
+.blurb-row h3{
+  margin-bottom:1em;
+}
+
+.blurb-row h3 {
+  letter-spacing: 0.05em;
+}
+
+.about-content-blurb {
+  text-align:center;
+  font-size:1.5em;
+  font-weight:200;
+  padding:3em 0em;
+}
+
+.blurb {
+  margin-bottom:3em;
+}
+
+.blurb:last-of-type {
+  margin-bottom:0;
+}
+
+.info-accordion {
+  width:100%;
+}
+
+.about-accordion-container {
+  padding:5em 0;
+}
+
+.about-accordion-container .accordion-content {
+  text-align:center;
+}
+
+.accordion-content ul {
+  list-style-type: disc;
+  padding: 0.75em 0 1em 1.25em;
+  text-align:left;
+}
+
+.accordion-content p:first-of-type {
+  padding-top:0.75em;
+}
+
+.accordion-content li {
+  margin-bottom:0.5em;
+}
+
+.accordion-content .cta-btn.sm {
+  font-size:0.75em;
+}
+
+/*-------------------------contact*/
+
+#contact-page-hero {
+  background: url("../img/contact-minimal-bg.jpg") no-repeat; 
+  background-position: 100% 0%;
+  background-size:cover;
+}
+
+.contact-form-row input, .contact-form-row textarea {
+  width:100%;
+  border: 1px solid white;
+  background:#35348e;
+  color:white;
+  margin-bottom: 0.5em;
+  border-radius:0.5em;
+  padding: 0.45em 0.45em;
+  font-size:1.5em;
+  font-weight: 200;
+} 
+
+#contact-content-container .contact-form-row {
+  text-align:center;
+}
+
+.contact-form-row input::placeholder, .contact-form-row textarea::placeholder {
+  color:white;
+}
+
+#contact-content-container .small-details {
+  margin-top: 3em;
+  padding-top:2em;
+  border-top:1px solid #ffffff30;
+}
+
+#contact-content-container .small-details i {
+  margin-right:0.75em;
+  color:#f1b0c4;
+}
+
+#Form_ContactForm_action_submit {
+  max-width:6em;
+  background:white;
+  color:#302F83;
+  margin:0 auto;
+  font-weight:500;
+  text-transform: uppercase;
 }
 
 /*------------------------------------------------*/
@@ -1369,12 +1568,15 @@ p.no-events {
   }
 
   /*--------------------------------------comic page*/
+
   .comic-profile-image {
     border-radius: 100%;
     width: 200px;
     height: 200px;
   }
+
   /*--------------------------------------upcoming shows page*/
+
   .calendar-widget-table tbody .hasEvent {
     background-color: grey;
     color: white;

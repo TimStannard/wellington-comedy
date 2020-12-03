@@ -2,17 +2,9 @@
 
 namespace SilverStripe\WellingtonComedy;
 
-use Page; 
-use PageController;     
+use Page;    
 
 class ContactPage extends Page 
 {
 
 }
-
-
-class ContactPageController extends PageController 
-{
-
-}
-

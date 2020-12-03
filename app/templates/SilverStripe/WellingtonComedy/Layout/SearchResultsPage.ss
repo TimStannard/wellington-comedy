@@ -1,10 +1,10 @@
 <%-- hero --%>
 <div id="searchresults-hero" class="hero">
-	<h2>Search results</h2>
+	<h1 class="white">Search results</h1>
 </div>
 				
 <%-- results list --%>
-<div id="searchresults-list" class="large-search-container">
+<div id="searchresults-list" class="large-search-container regular-bg">
      <div class="container-fluid">
      	<div class="row">
      		<div id="results-number" class="col-sm-12">
@@ -36,6 +36,7 @@
 					</div>
 				</div>
 			<% end_loop %>
+			</div>
 		<% end_if %>
 		<% if $Events %>
 			<div class="row">
@@ -45,7 +46,7 @@
 						<% if $Image %>
 							<a href="$Link">$Image</a>
 						<% end_if %>
-						<div class="upcoming-text-container">
+						<div class="sm-upcoming-gig-title">
 							<a href="$Link">
 								<p class="gig-link">Event: $Title</p>
 							</a>

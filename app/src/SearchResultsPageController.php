@@ -14,11 +14,17 @@ class SearchResultsPageController extends PageController
 
 	public function index(HTTPRequest $request)
     {
+        $keywords = $request->getVar('Keywords');
+        if ($keywords == " "){
+        	$noresult = true;
+			return [
+            'NoResult' => $noresult,
+            'Keywords' => $keywords
+        	];
+        }
         $comedians = ComedianPage::get();
-		$ce = CalendarEvent::get();
-		$keywords = $request->getVar('Keywords');
-
-       if ($search = $request->getVar('Keywords')) {
+		$ce = CalendarEvent::get();		
+        if ($search = $request->getVar('Keywords')) {
     		$ce = $ce->filter([
         	'Title:PartialMatch' => $search             
     		]);

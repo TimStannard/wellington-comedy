@@ -3,16 +3,16 @@
 		 <h2 class="white">Comedian profile</h2>
 </div>
 <%-- comic profile section --%>
-<div id="comedian-profile-container">
+<div id="comedian-profile-container" class="regular-bg">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-4">
-					<div class="comic-profile-img">
-						$Photo.ScaleWidth(200)
-					</div>
+				<div class="comic-profile-img">
+					$Photo.ScaleWidth(200)
+				</div>
 			</div>
 			<div class="col-md-8 comic-profile-description lato">
-				<h1 class="wavy">$Title</h1>   
+				<h1>$Title</h1>   
 				<p class="comic-short-blurb">$Blurb</p>
 				<div id="comic-profile-text">$Profile</div>
 			</div>
@@ -21,12 +21,12 @@
 </div>
 
 <% if $ComedianEvents %>
-<div id="comedian-upcoming-shows" class="page-section equal squeeze-in">
+<div id="comedian-upcoming-shows" class="page-section equal squeeze-in light-bg">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="upcoming-header">
-					<h2>Upcoming performances</h2>
+					<h2>PERFORMING IN:</h2>
 				</div>
 			</div>
 			<% if $ComedianEvents %>
