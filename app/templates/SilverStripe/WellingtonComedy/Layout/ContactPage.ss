@@ -9,7 +9,7 @@
 		<div class="row page-section-small">
 			<div class="col-md-12">
 				<p class="regular-text centered">
-					Have a look over the comedy nights we run - from beginners, to new material, to pro nights - and get in touch below.
+					Get in touch if you have any general inquiries. If you're interested in booking a spot, have a look over the comedy nights we run - from beginners, to new material, to pro nights - and give us a heads up.
 				</p>
 			</div>
 		</div>

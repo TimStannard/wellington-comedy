@@ -13,6 +13,7 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\Form;
+use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Control\Email\Email; 
 
@@ -23,9 +24,12 @@ class ContactPageController extends PageController
 
         public function ContactForm() 
     { 
+    	$inquiryoptions = array("General inquiry" => "General inquiry", "Raw Meat Booking" => "Raw Meat Booking", "Other" => "Other");
         $fields = new FieldList( 
             TextField::create('Name','')->setAttribute('placeholder', 'Your name'),
             EmailField::create('Email', '')->setAttribute('placeholder', 'Your email'),
+            DropdownField::create('InquiryType', '', $inquiryoptions)
+			    ->setEmptyString('Inquiry type'),
             TextareaField::create('Message', '')->setAttribute('placeholder', 'Your Message')
         ); 
         $actions = new FieldList( 
