@@ -457,14 +457,13 @@ p.sm.bold{
 /*--------------------------------------home page*/
 
 #home-hero {
-  padding-bottom: 5em;
   background: #302f83;
 }
 
 .swiper-container {
   width: 95%;
   margin-top: 7.5em;
-  padding-bottom: 1em;
+  padding-bottom: 0em;
 }
 
 .swiper-button-next:after,
@@ -494,7 +493,7 @@ p.sm.bold{
 
 .swiper-slide {
   position: relative;
-  padding: 2em 1em 1em 1em;
+  padding: 2em 1em 5em 1em;
   background-size: cover!important;
   background-position: 80% 100%;
   text-align: center;
@@ -510,6 +509,10 @@ p.sm.bold{
   bottom: 0px;
   left: 0px;
   opacity: 0.85;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom:2.75em;
 }
 
 .swiper-wrapper.disabled {
@@ -780,6 +783,7 @@ h2 {
 
 }
 
+
 #upcoming-calendar table {
   border-collapse: separate;
   border-spacing: 2px;
@@ -812,6 +816,9 @@ h2 {
     font-weight:500;
 }
 
+  #upcoming-calendar td.calendar-header-day  {
+    font-size:1.15em;
+  }
 
 /*month jumper*/
 
@@ -892,7 +899,7 @@ p.no-events {
   font-size:1.5em;
   text-align:center;
   width: 100%;
-  padding: 0em 0.5em 1em 0.5em;
+  padding: 0em 0.5em;
   font-weight: 200;
 }
 
@@ -1439,7 +1446,7 @@ p.no-events {
     margin: 2.75em 2em auto auto;
   }
   .animated-icon {
-    transform:scale(1.5);
+    transform:scale(1.25);
   }
 
   #nav-links a {
@@ -1461,7 +1468,6 @@ p.no-events {
     width: 95%;
     height:auto;
     padding-top:3em;
-    max-height: 100vh;
   }
   .swiper-button-next:after,
   .swiper-button-prev:after {
@@ -1492,7 +1498,7 @@ p.no-events {
   }
 
   .swiper-slide {
-    padding: 2.5em 12.5vw 4.5em 15vw;
+    padding: 2.5em 12.5vw 11em 15vw;
     background-size: contain!important;
     background-position: 80% 100%;
     text-align: left;
@@ -1500,12 +1506,17 @@ p.no-events {
   .swiper-slide:before {
     display: none;
   }
-  .swiper-slide:first-of-type {
-    /*padding: 2.5em 12.5vw 4.5em 8.5vw;*/
+
+/*  .swiper-slide:first-of-type {
     padding: 2.5em 2.5em 9.5em 9.5em;
+  }*/
+
+  #default-hero-h2 {
+    margin-top:6.7em;
   }
+
   .hero-subheader {
-    font-size: 3.25em;
+    font-size: 2.5em;
     line-height: 1.1em;
     color: white;
     margin: initial;
@@ -1520,7 +1531,7 @@ p.no-events {
 
   #home-hero .todays-event-blurb {
     padding-top:1em;
-  font-size: 2.75em;
+  font-size: 2.25em;
   line-height: 1.3em;
   max-width:70vw;
   margin:0;
@@ -1528,16 +1539,16 @@ p.no-events {
 
   .todays-events-swiper h1 {
     margin-top: 0.40em;
-    font-size: 7.5em;
+    font-size: 5.5em;
     line-height: 0.935em;
-    /*max-width: 50vw;*/
   }
   .hero-gig-link h1:hover {
     opacity: 0.7;
   }
   .todays-events-swiper h2 {
     display: initial;
-    font-size: 4.5rem;
+    /*font-size: 4.5rem;*/
+    font-size:3.5rem;
     color: #f1b0c4;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -1557,7 +1568,7 @@ p.no-events {
   .swiper-slide:first-of-type h2 {
     margin-top: 7.05em;
     transform-origin: 27% 160%;
-    margin-left:0em;
+    margin-left:0.25em;
   }
   #home-hero .cta-btn {
     padding: 0.85em 1.35em;
@@ -1578,7 +1589,7 @@ p.no-events {
 
   /*upcoming home events*/
   .page-section {
-    padding: 6vh 0;
+    padding: 6em 0;
   }
 
   /*contact*/
@@ -1647,29 +1658,6 @@ p.no-events {
         margin-bottom:-0.5em;
       }
 
-      /*overlay*/
-
-    /*.event-img-overlay {
-      position: absolute; 
-      transition: all 0.3s ease; 
-      opacity: 0; 
-      background-color: #9bcd9b; 
-
-    }
-     .overlay-container:hover .event-img-overlay { 
-            opacity: 1; 
-            border:9px solid black;
-        } */
-/*
-        img {
-          transition:all 0.3s ease;
-          position:relative;
-        }
-        img:hover {
-          top:-0.25em;
-            box-shadow: 0px 51px 57px -44px rgb(0 0 0 / 40%);
-        }*/
-
   /*-----------------------------home page*/
   h2 {
     font-size:4em;
@@ -1719,14 +1707,17 @@ p.no-events {
 
   .hero-subheader {
     max-width: 10em;
+    font-size:3.25em;
   }
 
   .todays-events-swiper h1 {
     max-width: 50vw;
+    font-size: 7.5em;
   }
 
   #home-hero .todays-event-blurb {
     max-width:40vw;
+    font-size:2.5em;
   }
 
   #contact-minimal p {
