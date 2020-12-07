@@ -447,6 +447,10 @@ p.sm.bold{
   display: none;
 }
 
+.desktop-only-row {
+  display:none;
+}
+
 
 /*------------------------------------------------*/
 
@@ -747,7 +751,7 @@ h2 {
 /*calendar*/
 
   #upcoming-calendar{
-    padding:3em 0;
+    padding:3em 0 4em 0;
   }
 
   #upcoming-calendar .calendar-widget-table {
@@ -1392,7 +1396,13 @@ p.no-events {
 
 @media only screen and (min-width: 600px) {
   /*general*/
-
+  .hero {
+    margin-top:10.5em;
+    padding: 8em 1em;
+  }
+  .hero h1 {
+    font-size: 3em;
+  }
 
   /*text*/
   .underline-wave {
@@ -1443,7 +1453,7 @@ p.no-events {
     padding-top:1.5em;
   }
   #nav-hamburger {
-    margin: 2.75em 2em auto auto;
+    margin: 3.25em 2.5em auto auto;
   }
   .animated-icon {
     transform:scale(1.25);
@@ -1506,10 +1516,6 @@ p.no-events {
   .swiper-slide:before {
     display: none;
   }
-
-/*  .swiper-slide:first-of-type {
-    padding: 2.5em 2.5em 9.5em 9.5em;
-  }*/
 
   #default-hero-h2 {
     margin-top:6.7em;
@@ -1614,13 +1620,46 @@ p.no-events {
     color: white;
   }
 
+  #upcoming-hero {
+    background-position:0 26%;
+  }
+
+  #upcoming-calendar tr {
+    height:3.5em;
+  }
+ #upcoming-calendar tbody {
+  font-size:1.15em;
+  }
+
+  #upcoming-calendar th {
+    font-size:2em;
+  }
+
+  #upcoming-calendar .calendar-widget {
+    margin-bottom:-1em;
+  }
+
+  #event-quick-nav-container {
+    width:30%;
+  }
+
+  #upcoming-calendar {
+    padding: 3em 0 6em 0;
+  }
+
+  .event-calendar-next-prev a:nth-of-type(2) {
+     display: inline; 
+  }
+
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-
+    .desktop-only-row {
+    display:flex;
+  }
 }
 
 
@@ -1629,6 +1668,14 @@ p.no-events {
 @media only screen and (min-width: 992px) {
 
   /*general*/
+
+    .hero {
+    margin-top:10.5em;
+    padding: 12em 1em;
+  }
+  .hero h1 {
+    font-size: 3.5em;
+  }
 
   /*typogtaphy*/
 
@@ -1728,8 +1775,42 @@ p.no-events {
 
   /*upcoming shows page*/
 
-  tr {
-    height:5em;
+  #upcoming-hero {background-position:0% 40%;}
+
+  .calendar-widget-table tbody .hasEvent {
+    background-color: grey;
+    color: white;
+  }
+
+  #upcoming-hero {
+    background-position:0 26%;
+  }
+
+  #upcoming-calendar tr {
+    height:3.5em;
+  }
+ #upcoming-calendar tbody {
+  font-size:1.25em;
+  }
+
+  #upcoming-calendar th {
+    font-size:2.5em;
+  }
+
+  #upcoming-calendar .calendar-widget {
+    margin-bottom:-1em;
+  }
+
+  #event-quick-nav-container {
+    width:auto;
+  }
+
+  #upcoming-calendar {
+    padding: 5em 0 6em 0;
+  }
+
+  #event-quick-nav-container {
+    font-size: 1.75em;
   }
 
   /*----------------------comedian holder page
