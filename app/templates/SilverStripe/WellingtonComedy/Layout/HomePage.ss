@@ -71,7 +71,7 @@
 		</div>
 	</div>
 </div>
-<div id="home-week-ofit" class="page-section squeeze-in light-bg">
+<div id="home-upcoming-events" class="page-section squeeze-in light-bg">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -81,12 +81,14 @@
 			</div>
 				<% if $GetWeekEvents %>
 					<% loop $GetWeekEvents.Limit(4) %>
-						<div class="col-md-6 col-lg-3 upcoming-event">
+						<div class="col-md-6 col-lg-3 upcoming-event card-event">
 							<% if $Image %>
 								<a href="$Link">$Image</a>
 							<% end_if %>
 							<div class="upcoming-text-container">
-								<h4 class="gig-link wavy">$Title</h4>
+								<a href="$Link" class="hover-white">
+									<h4 class="gig-link wavy">$Title</h4>
+								</a>
 								<p class="event-date">$DateRange</p>
 								<p class="todays-event-blurb sm">$ShortBlurb.LimitCharacters(180)</p>
 								<a href="$Link">

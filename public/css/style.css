@@ -609,21 +609,8 @@ h2 {
 }
 
 
-/*#home-week-ofit:before {
-
-    position: relative;
-    display: block;
-    content: "\00a0\00a0\00a0";
-    border-bottom-color: transparent;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift 5.75s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(0px);}}%3C/style%3E%3Cpath fill='none' stroke='%23f1b0c4' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-    background-position: 0 1.5em;
-    background-size: auto 7.5px;
-    padding-bottom: 0em;
-    margin: -0.9em auto 0 auto;
-    height: 6em;
-    opacity:0.1;
-
-}*/
+#home-upcoming-events {
+}
 
 
 /*upcoming home events*/
@@ -733,25 +720,15 @@ h2 {
   background-size:cover;
 }
 
-
-.calendar-widget-table th:after {
-/*   position: relative;
-    display: block;
-    content: "\00a0\00a0\00a0";
-    border-bottom-color: transparent;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift 5.75s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(0px);}}%3C/style%3E%3Cpath fill='none' stroke='%23f1b0c4' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-    background-position: 0 1.5em;
-    background-size: auto 7.5px;
-    padding-bottom: 0em;
-    margin: -0.9em auto 0 auto;
-    height: 1em;
-    opacity:0.1;*/
-}
+  .upcoming-event img {
+    border: 1px solid #ffffff38;
+  }
 
 /*calendar*/
 
   #upcoming-calendar{
     padding:3em 0 4em 0;
+       overflow:auto;
   }
 
   #upcoming-calendar .calendar-widget-table {
@@ -890,7 +867,7 @@ a.prev {
   float:left;
 }
 a.next, a.prev {
-  opacity:0.2;
+  color: #ffffff24;
 }
 
 /*calendar selected event list*/
@@ -1426,6 +1403,10 @@ p.no-events {
     display: block;
   }
 
+  .tablet {
+    display:block;
+  }
+
   p.sm{
     font-size:1.85em;
   }
@@ -1449,7 +1430,7 @@ p.no-events {
   }
   #nav-links {
     height: auto;
-    font-size:2em;
+    font-size:1.75em;
     padding-top:1.5em;
   }
   #nav-hamburger {
@@ -1518,7 +1499,7 @@ p.no-events {
   }
 
   #default-hero-h2 {
-    margin-top:6.7em;
+    margin-top:7.45em;
   }
 
   .hero-subheader {
@@ -1586,7 +1567,8 @@ p.no-events {
   }
   #home-hero .cta-btn:hover {
     color: #302f83;
-    background-color: pink;
+    background-color: #f1b0c4;
+    border-color:#f1b0c4;
   }
 
   .swiper-pagination {
@@ -1625,7 +1607,7 @@ p.no-events {
   }
 
   #upcoming-calendar tr {
-    height:3.5em;
+    height:3em;
   }
  #upcoming-calendar tbody {
   font-size:1.15em;
@@ -1657,9 +1639,11 @@ p.no-events {
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-    .desktop-only-row {
-    display:flex;
+
+  .hover-white:hover {
+    color:white;
   }
+
 }
 
 
@@ -1671,13 +1655,21 @@ p.no-events {
 
     .hero {
     margin-top:10.5em;
-    padding: 12em 1em;
+    padding: 8em 1em;
   }
   .hero h1 {
     font-size: 3.5em;
   }
 
-  /*typogtaphy*/
+    .tablet {
+    display:none;
+  }
+
+    .desktop-only-row {
+    display:flex;
+  }
+
+  /*typography*/
 
   .cta-btn:hover {
     color:#302F83;
@@ -1686,7 +1678,11 @@ p.no-events {
   }
 
   .page-section.squeeze-in {
-    padding:7em 7em 7em 7em;
+    padding:7em;
+    }
+
+  .page-section.squeeze-in.medium-screens {
+    padding:7em 1em;
     }
 
     /*nav*/
@@ -1709,6 +1705,9 @@ p.no-events {
   h2 {
     font-size:4em;
     padding-bottom:0.5em;
+  }
+    #default-hero-h2 {
+    margin-top:6.7em;
   }
   .swiper-container {
     padding-top:11em;
@@ -1775,11 +1774,21 @@ p.no-events {
 
   /*upcoming shows page*/
 
-  #upcoming-hero {background-position:0% 40%;}
+  #upcoming-hero {
+    background-position:0% 60%;
+  }
+
+  a.next:hover, a.prev:hover {
+  color: pink;
+}
 
   .calendar-widget-table tbody .hasEvent {
     background-color: grey;
     color: white;
+  }
+
+  .upcoming-event {
+    padding-bottom:2em;
   }
 
   #upcoming-hero {
@@ -1787,7 +1796,7 @@ p.no-events {
   }
 
   #upcoming-calendar tr {
-    height:3.5em;
+    height:2.85em;
   }
  #upcoming-calendar tbody {
   font-size:1.25em;
@@ -1802,22 +1811,88 @@ p.no-events {
   }
 
   #event-quick-nav-container {
-    width:auto;
+    width: 50%;
   }
 
   #upcoming-calendar {
-    padding: 5em 0 6em 0;
+    padding: 0;
   }
+
+    #upcoming-calendar th {
+      padding-bottom:0.5em;
+      font-weight:400;
+    }
 
   #event-quick-nav-container {
     font-size: 1.75em;
   }
 
-  /*----------------------comedian holder page
+  .event-calendar-month-jumper {
+    font-size: 1.08em;
+}
 
-  .comedian-list-item img {
-    width:50px;
-    height:50px;
+  .event-calendar-month-jumper input,   .event-calendar-month-jumper select {
+    margin-top:0.25em;
+  }
+  .upcoming-events-desktop {
+    padding:0 4em;
+  }
+  .upcoming-events-desktop h2 {
+    font-size:3em;
+  }
+
+  .show-month {
+    font-size:0.75em;
+    letter-spacing: 0.025em;
+  }
+
+  .calendar-box-desktop {
+    overflow:auto;
+    background-color: #ffffff0a;
+    border-radius: 1em;
+    padding: 0.5em 2em 2.5em 2em;
+    box-shadow: 0px 35px 50px -6px #0000001a;
+  }
+
+  #date-jumper-container h3 {
+    font-size: 1.75em;
+    font-weight:400;
+  }
+
+  #event-quick-nav-container {
+    padding-right:1.25em;
+    margin-right:1.25em;
+  }
+
+  .desktop-only-row {
+  background: url("../img/wavy-section-bg.jpg") no-repeat; 
+  background-position: 100% 100%;
+  background-size:fit;
+  }
+
+  #upcoming-calendar td.calendar-header-day  {
+    font-size:1.15em;
+    background-color: #383788;
+    font-weight:400;
+  }
+
+  p.no-events {
+    font-size:1.85em;
+  }
+
+  p.event-date {
+    margin-bottom:1em;
+  }
+
+  .card-event img {
+  position: relative;
+  transition: all 0.3s ease-out;
+  }
+
+  .card-event img:hover {
+  transform: translateY(-0.6em) translateZ(0);
+  box-shadow: 0px 35px 50px -6px #0000001a;
+  border-color:#ffffffba;
   }
 
 }
@@ -1825,4 +1900,8 @@ p.no-events {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
-@media only screen and (min-width: 1400px) {}
+@media only screen and (min-width: 1400px) {
+    .page-section.squeeze-in.medium-screens {
+    padding:7em 2em;
+    }
+}
