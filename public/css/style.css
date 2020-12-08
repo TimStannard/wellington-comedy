@@ -167,7 +167,7 @@ p.sm.bold{
   margin-top: 1.5em;
 }
 
-.hero p, h1, h2 {
+.hero p, .hero h1, .hero h2, .hero h4, h1, h2 {
   text-shadow: 0 0 0.25em #302F83, 0 0 0.25em #302F83;
 }
 
@@ -1657,10 +1657,15 @@ p.no-events {
     margin-top:10.5em;
     padding: 8em 1em;
   }
-  .hero h1 {
-    font-size: 3.5em;
-  }
 
+  /*typography*/
+
+  .hero h1 {
+    font-size: 4em;
+  }
+  .hero .title-preheading {
+    font-size: 2.5em;
+  }
     .tablet {
     display:none;
   }
