@@ -29,6 +29,17 @@ $(document).ready(function() {
       $('.swiper-button-prev').addClass( "disabled" );
     }
 
+    // hover over comedian name text to make image hover (comedian holder page)
+
+    $('.image-hover-link').on('mouseenter', function() {
+        $(this).find('img').toggleClass("hover-animation");
+    });
+
+    $('.image-hover-link').on('mouseleave', function() {
+        $(this).find('img').toggleClass("hover-animation");
+    });
+    // 
+
     /*-------------------------------------------------------------------------------
       Navigation - Hide mobile menu after clicking on a link
     -------------------------------------------------------------------------------*/

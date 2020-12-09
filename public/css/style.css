@@ -144,6 +144,7 @@ i.small-header {
 
 a {
   color: white;
+  transition: all 0.2s ease;
 }
 a:hover {
   color:#f1b0c4; 
@@ -153,9 +154,12 @@ a:hover {
   color:#f1b0c4;
 }
 
+p {
+  font-weight:200;
+}
+
 p.sm, .sm p {
   font-size: 1.5em;
-  font-weight: 200;
 }
 p.sm.bold{
   font-weight: 600;
@@ -291,7 +295,7 @@ p.sm.bold{
 #nav-container .current {
   color: #f1b0c4;
 }
-
+/*
 #nav-container.mobile-menu-open {
   padding-bottom: 3.5em;
   box-shadow: 0px 51px 57px -24px rgb(0 0 0 / 40%);
@@ -312,13 +316,13 @@ p.sm.bold{
   background-color: transparent;
   opacity: 0;
   top: 30px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 #mobile-wavy-menu.show {
   opacity: 1;
   height: 31px;
-}
+}*/
 
 #navbar-brand img {
   max-width: 4em;
@@ -342,6 +346,7 @@ p.sm.bold{
 #nav-links a {
   color: white;
   line-height: 2em;
+  transition: all 0.3s ease;
 }
 
 #nav-links a:hover {
@@ -1015,8 +1020,8 @@ p.no-events {
 /*-------------------------------------comedian holder page*/
 
 #comedians-holder-hero {
-  background: url("../img/nokise-bg.jpg") no-repeat; 
-  background-position: 50% 100%;
+  background: url("../img/nokise-lg-bg.jpg") no-repeat; 
+  background-position: 100% 100%;
   background-size:cover;
 }
 
@@ -1035,16 +1040,21 @@ p.no-events {
     float:left;
     transition: all 0.2s ease-out;
     border: 1px solid #ffffff30;
+    width:50px;
+    height:50px;
 }
 
 .comedian-list-item p {
   padding:0.25em;
 }
 
-.comedian-list-item {
+.mobile .comedian-list-item, .tablet .comedian-list-item {
   padding:0.5em 0;
-  border-bottom: 1px solid #ffffff14;
   margin-bottom:0.5em;
+}
+
+.comedian-list-item {
+  border-bottom: 1px solid #ffffff14;
 }
 
 .accordion-content.open .comedian-list-item {
@@ -1059,22 +1069,6 @@ p.no-events {
 .comedian-first-letter {
   width:100%;
 }
-
-/*pagination*/
-/*
-#comedians-pagination {
-  text-align:center;
-  font-size:1.5em;
-  font-weight:200;
-  padding:1em;
-}
-
-#comedians-pagination a {
-  margin-right:1em;
-  padding:0.25em 0.35em 0.35em 0.35em;
-  border:1px solid white;
-}
-*/
 
 /*accordian*/
 
@@ -1210,7 +1204,7 @@ p.no-events {
 }
 
 #searchresults-list .comedian-list-item {
-  padding-bottom:1.5em;
+  padding:0.5em 0 1.25em 0;
 }
 
 #searchresults-list .gig-link {
@@ -1382,9 +1376,10 @@ p.no-events {
   }
 
   /*text*/
+
   .underline-wave {
     text-decoration: none;
-    background-position: 0 1.25em;
+    background-position: 0 1.35em;
     padding-bottom: 12px;
   }
   .underline-wave:hover {
@@ -1587,7 +1582,13 @@ p.no-events {
     box-shadow:none;
   }
 
-  /*--------------------------------------comic page*/
+  /*-------------------------------------- comic holder page*/
+    #comedians-holder-hero {
+  background-position: 100% 59%;
+   box-shadow: inset 120px 118px 120px 0px #0000001c;
+  }
+
+  /*--------------------------------------individual comic page*/
 
   .comic-profile-image {
     border-radius: 100%;
@@ -1633,6 +1634,15 @@ p.no-events {
      display: inline; 
   }
 
+  /*-----------------------------search results page*/
+
+  #searchresults-list .comedian-list-item {
+    padding: 0.55em 0 0.95em 0;
+  }
+  #searchresults-list .comedian-list-item p {
+    font-size:1.55em;
+  }
+
 }
 
 
@@ -1674,7 +1684,15 @@ p.no-events {
     display:flex;
   }
 
-  /*typography*/
+  p.sm {
+    font-size: 1.6em;
+  }
+
+  p.med {
+    font-size:2em;
+  }
+
+  /*buttons, page sections*/
 
   .cta-btn:hover {
     color:#302F83;
@@ -1699,12 +1717,12 @@ p.no-events {
     #Form_SearchForm {
     width: 100%;
     max-width:9em;
-    margin-left:1.5em;
-    margin-top: 0.225em;
-  }
-      #Form_SearchForm .actions {
-        margin-bottom:-0.5em;
-      }
+    margin-left:1.35em;
+    margin-top: 0.07em;
+    }
+    #Form_SearchForm .actions {
+      margin-bottom:-0.5em;
+    }
 
   /*-----------------------------home page*/
   h2 {
@@ -1784,7 +1802,7 @@ p.no-events {
   }
 
   a.next:hover, a.prev:hover {
-  color: pink;
+  color: #f1b0c4;
 }
 
   .calendar-widget-table tbody .hasEvent {
@@ -1853,7 +1871,7 @@ p.no-events {
 
   .calendar-box-desktop {
     overflow:auto;
-    background-color: #ffffff0a;
+    background-color: #4c4c94;
     border-radius: 1em;
     padding: 0.5em 2em 2.5em 2em;
     box-shadow: 0px 35px 50px -6px #0000001a;
@@ -1869,10 +1887,9 @@ p.no-events {
     margin-right:1.25em;
   }
 
-  .desktop-only-row {
-  background: url("../img/wavy-section-bg.jpg") no-repeat; 
-  background-position: 100% 100%;
-  background-size:fit;
+  .wavy-section-bg {
+  background: url("../img/mosaic.jpg") repeat; 
+  box-shadow: inset 0px 2em 220px 100px #302f83;
   }
 
   #upcoming-calendar td.calendar-header-day  {
@@ -1894,11 +1911,121 @@ p.no-events {
   transition: all 0.3s ease-out;
   }
 
-  .card-event img:hover {
+  .card-event img:hover, .comedian-list-item .hover-animation {
   transform: translateY(-0.6em) translateZ(0);
   box-shadow: 0px 35px 50px -6px #0000001a;
   border-color:#ffffffba;
   }
+
+
+  /*----------------------------comedian holder page*/
+
+  .comedian-list-item .comic-profile-image {
+    width: 5em;
+    height:5em;
+  }
+
+  #comedian-holder-list {
+    padding:4em 4em 6em 4em;
+  }
+
+  .comic-list-col .comedian-list-item {
+    padding:0.85em 0 1.2em 0;
+  }
+
+   .comedian-list-item p {
+    position:relative;
+    top:0.25em;
+    left:0.1em;
+   }
+
+
+  /*pagination*/
+
+  #comedians-pagination {
+    text-align:center;
+    font-size:1.5em;
+    font-weight:600;
+    padding:2.5em 1em 0em 1em;
+  }
+
+  #comedians-pagination a {
+     font-weight:200;
+    margin-left:0.2em;
+    position:relative;
+    top: -0.05em;
+    padding:0.25em 0.35em 0.35em 0.35em;
+    border:1px solid white;
+  }
+
+    #comedians-pagination a:hover {
+      color:#302F83;
+      background: white;
+    }
+
+    .a-z-box {
+      overflow: auto;
+    background-color: #4c4c94;
+    border-radius: 1em;
+    padding: 2em 1em;
+    box-shadow: 0px 35px 50px -6px #0000001a;
+
+    }
+
+    .a-z-box h3 {
+      margin-bottom:1em;
+      color:#f1b0c4;
+    }
+
+     .comic-list-col h3 {
+      margin-bottom:0.5em;
+      padding-bottom:0.5em;
+      border-bottom: 1px solid #ffffff14;
+    }
+
+    .accordion {
+      text-align:left;
+      padding-left:1em;
+    }
+
+    .accordion:hover {
+      cursor:pointer;
+      border:1px solid white;
+    }
+
+    .comic-list-col {
+      padding-left:4em;
+    }
+
+    .a-z-box #Form_SearchForm {
+    font-size: 1.65em;
+    margin: 1em 0 0.25em 0;
+    max-width:99%;
+    }
+
+    .accordion-content p:first-of-type {
+      padding-top:0.25em;
+    }
+
+    .accordion-content.open .comedian-list-item, .accordion-content .comedian-list-item {
+      padding:0.5em 0 1em 0;
+    }
+
+    .accordion-content .comedian-list-item p {
+      position:relative;
+      top:0.25em;
+      font-size: 1.2em;
+    }
+    .accordion-content .comedian-list-item .comic-profile-image {
+      width:4.5em;
+      height:4.5em;
+    }
+
+    /*search results page*/
+
+    #searchresults-list {
+      padding: 3em 6em;
+    }
 
 }
 

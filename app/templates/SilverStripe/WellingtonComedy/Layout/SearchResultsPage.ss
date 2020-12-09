@@ -42,16 +42,16 @@
 			<div class="row">
 			<% loop $Events %>
 				<div class="col-md-3 col-sm-12 upcoming-event">
-					<div class="upcoming-event-inner">
-						<% if $Image %>
-							<a href="$Link">$Image</a>
-						<% end_if %>
-						<div class="sm-upcoming-gig-title">
-							<a href="$Link">
+					<a href="$Link">
+						<div class="upcoming-event-inner">
+							<% if $Image %>
+								$Image
+							<% end_if %>
+							<div class="sm-upcoming-gig-title">
 								<p class="gig-link">Event: $Title</p>
-							</a>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			<% end_loop %>
 			</div>

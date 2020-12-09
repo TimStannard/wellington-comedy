@@ -13,7 +13,7 @@ class ComedianHolderController extends PageController
         $r = $this->Children()
             ->sort('Title','asc');
             $pages = new PaginatedList($r, $this->getRequest());
-            $pages->setPageLength(12);
+            $pages->setPageLength(36);
             return $pages;
     }
 
