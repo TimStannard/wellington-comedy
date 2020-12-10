@@ -5,7 +5,7 @@
 <%-- comic profile section --%>
 <div id="comedian-profile-container" class="regular-bg">
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row comedian-profile-row wavy-section-bg">
 			<div class="col-md-4">
 				<div class="comic-profile-img">
 					$Photo.ScaleWidth(200)
@@ -26,21 +26,20 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="upcoming-header">
-					<h2>PERFORMING IN:</h2>
+					<h2 class="wavy">PERFORMING IN:</h2>
 				</div>
 			</div>
 			<% if $ComedianEvents %>
 				<% loop $ComedianEvents %>
-				<div class="col-sm-3 upcoming-event">
+				<div class="col-sm-4 col-md-4 col-lg-3 upcoming-event">
 					<% if $Image %>
 					<a href="$Link">$Image</a>
 					<% end_if %>
 					<div class="upcoming-text-container">
 						<a href="$Link">
-							<h4 class="gig-link wavy">$Title</h4>
+							<h4 class="gig-link">$Title</h4>
 						</a>
 						<p class="event-date">$DateRange</p>
-						<p class="todays-event-blurb sm">$ShortBlurb.LimitCharacters(180)</p>
 						<a href="$Link">
 							<button class="cta-btn sm">Read more</button>
 						</a>

@@ -4,14 +4,14 @@
 	<h1 class="banner-title">$Title</h1>   
 </div>
 <%-- holder list --%>
-<div id="comedian-holder-list">
+<div id="comedian-holder-list" class="wavy-section-bg">
 	<div class="container-fluid">
-		<div class="row mobile tablet">
+		<div class="row mobile">
 			<div class="col-sm-12 large-search-container">
 				$SearchForm
 			</div>
 		</div>
-		<div class="row mobile tablet">
+		<div class="row mobile accordion-row">
 			<% loop $GroupedChildren.GroupedBy(ChildFirstLetter) %>
 			<div class="col-md-12">
 				<button class="comedian-first-letter accordion">
@@ -35,7 +35,7 @@
 			</div>
 			<% end_loop %>
 		</div>
-		<div class="row desktop-only-row wavy-section-bg">
+		<div class="row tablet desktop wavy-section-bg">
 			<div class="col-md-3">
 				<div class="row">
 					<div class="col a-z-box">
@@ -72,12 +72,12 @@
 				</div>
 			</div>
 			<div class="col-md-9 comic-list-col">
-				<div class="row">
+				<div class="row tablet desktop">
 					<div class="col-md-12">
 						<h3>All comedians</h3>
 					</div>
 					<% loop $ShowChildren %>
-					<div class="col-md-4">
+					<div class="col-sm-6 col-md-6 col-lg-4 accordion-col">
 						<div class="comedian-list-item">
 							<% if $Photo %>
 								<a href="$Link" class="image-hover-link">
@@ -87,7 +87,7 @@
 										</div>
 									<% end_with %>
 							<% end_if %>
-							<p class="sm">$Title</p></a>
+							<p class="xs">$Title</p></a>
 						</div>
 					</div>
 					<% end_loop %>
