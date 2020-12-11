@@ -144,7 +144,7 @@ i.small-header {
 
 a {
   color: white;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in-out;
 }
 a:hover {
   color:#f1b0c4; 
@@ -292,7 +292,6 @@ p.sm.bold{
 }
 
 #nav-container .link {
-  /*color: #f1b0c4;*/
   color:white;
 }
 
@@ -303,7 +302,6 @@ p.sm.bold{
 #nav-container.mobile-menu-open {
   padding-bottom: 3.5em;
   box-shadow: 0px 51px 57px -24px rgb(0 0 0 / 40%);
-  /*border-bottom: 1px solid #ffffff1c;*/
 }
 
 #navbar-brand img {
@@ -328,7 +326,7 @@ p.sm.bold{
 #nav-links a {
   color: white;
   line-height: 2em;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 #nav-links a:hover {
@@ -339,6 +337,20 @@ p.sm.bold{
   color: white;
   font-size: 30px;
   font-weight: 800;
+}
+
+/*general icons*/
+
+.time-icon {
+  margin-right:0.75em;
+}
+
+.fa-quote-left:before {
+  margin-right:0.5em;
+}
+
+.fa-quote-right:before {
+  margin-left:0.5em;
 }
 
 /*searchbar*/
@@ -356,7 +368,7 @@ p.sm.bold{
   padding: 0.25em 0.45em;
   background:transparent;
   color:white;
-  transition:all 0.3s ease;
+  transition:all 0.3s ease-in-out;
   width: 100%;
   font-weight: 200;
 }
@@ -628,6 +640,7 @@ h2 {
   line-height: 1.1em;
   text-align: center;
   margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 .upcoming-header .gig-link {
@@ -703,7 +716,7 @@ h2 {
   background-size:cover;
 }
 
-  .upcoming-event img {
+  .upcoming-event img, .ind-event-banner-img img {
     border: 1px solid #ffffff38;
   }
 
@@ -875,6 +888,12 @@ p.no-events {
     margin-bottom: 0;
 }
 
+/*--------------------------individual event page*/
+
+  .hero h1 {
+    font-size: 3em;
+  }
+
 .dtstart {
   font-weight:600;
   display:block;
@@ -922,6 +941,12 @@ p.no-events {
   border-radius: 0.5em;
   margin-top:2.375em;
   margin-bottom:2.375em;
+  box-shadow:0px 35px 50px -6px #0000001a;
+}
+
+.ind-event-banner-img .img-container {
+  max-width:90%;
+  margin:0 auto;
 }
 
 .individual-event-details .ind-event-comics img {
@@ -929,6 +954,7 @@ p.no-events {
   margin-bottom:0.5em;
   margin-right:0.25em;
   border: 1px solid #ffffff30;
+  transition: all 0.2s ease-in-out;
 }
 
 .event-other-dates-title {
@@ -956,7 +982,7 @@ p.no-events {
 
  .other-dates-container {
   margin-top: 6em;
-  padding: 5em 0 6em 0;
+  padding: 6em 0 6em 0;
   background: url("../img/contact-minimal-bg.jpg") no-repeat; 
   background-position: 50% 100%;
   background-size:cover;
@@ -967,7 +993,7 @@ p.no-events {
  }
 
 .icon {
-  margin-right:0.5em;
+  margin-right:0.75em;
 }
 
 .venue-name {
@@ -994,6 +1020,16 @@ p.no-events {
   padding-bottom:6em;
 }
 
+  .dtstart {
+    margin-bottom:0.33em;
+  }
+
+  .dtstart:before {
+    content:"\01F4C5";
+    margin-right:0.75em;
+  }
+
+
 /*-------------------------------------comedian holder page*/
 
 #comedians-holder-hero {
@@ -1015,7 +1051,7 @@ p.no-events {
     border-radius: 50%;
     margin: -0.40em 1em 0 0;
     float:left;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-in-out;
     border: 1px solid #ffffff30;
     width:50px;
     height:50px;
@@ -1056,14 +1092,14 @@ p.no-events {
   border-radius: 0.5em;
   border: 1px solid #ffffff30;
   margin-bottom:0.25em;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in-out;
   background:#4c4c94;
 }
 
 .accordion-content {
   max-height:0;
   width:100%;
-  transition: all 0.2s ease-out;
+  transition: all 0.2s ease-in-out;
   overflow: hidden;
   padding:0 1em;
 }
@@ -1094,7 +1130,7 @@ p.no-events {
 
 #comedian-profile-container img { 
   border-radius:50%;
-  border: 0.2em solid #f1b0c4;
+  border: 1px solid #7471ae;
   margin:4em 0;
   width:50vw;
   max-width:20em;
@@ -1111,7 +1147,7 @@ p.no-events {
 }
 .comic-profile-description .comic-short-blurb {
   font-size:1.75em;
-  margin-bottom:1.5em;
+   margin-bottom:0.5em;
 }
 
 .comic-short-blurb {
@@ -1135,7 +1171,7 @@ p.no-events {
 }
 
 #comic-profile-text {
-  font-size:1.5em;
+  font-size:1.65em;
   font-weight:200;
 }
 
@@ -1401,7 +1437,7 @@ p.no-events {
   /*buttons*/
 
   .cta-btn.sm {
-    font-size:1.5em;
+    font-size:1.25em;
   }
 
   /*navigation menu*/
@@ -1534,7 +1570,7 @@ p.no-events {
     transform-origin: 27% 0%;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in-out;
   }
   .swiper-slide h2{
     margin-left:-1.75em;
@@ -1618,15 +1654,19 @@ p.no-events {
     }
 
     .comic-profile-description {
-      padding:0 6em 6em 6em;
+      padding:0 2vw 6em 2vw;
     }
 
   /*--------------------------------------individual comic page*/
 
 
-.dtstart {
-  margin-bottom: 1em;
-}
+  .dtstart {
+    margin-bottom: 1em;
+  }
+
+  #comic-profile-text {
+    font-size:1.7em;
+  }
 
 
   /*--------------------------------------upcoming shows page*/
@@ -1696,6 +1736,35 @@ p.no-events {
     max-width: 33%;
   }
 
+  /*----------------------------------ind event page*/
+
+   #individual-event-hero h2 {
+    position:relative;
+    display:inline;
+  }
+
+ .show-details-header.tablet {
+    display:block;
+  }
+  .show-details-header {
+    color:#f1b0c4;
+  }
+
+.event-full-content .dtstart {
+    margin-top:2em;
+    margin-bottom:0.33em;
+  }
+
+  .event-full-content .cta-btn.sm {
+    margin-right:0.5em;
+  }
+
+  .ind-event-banner-img .img-container {
+    max-width: 40em;
+    margin: 2em auto;
+  }
+
+
 }
 
 
@@ -1713,6 +1782,14 @@ p.no-events {
 
    p.xs {
     font-size: 1.2em;
+  }
+
+  .internal-shadow {
+    box-shadow:inset 120px 118px 120px 0px #00000033;
+  }
+
+  .hero {
+    text-align:center;
   }
 
   /*upcoming shows*/
@@ -1740,12 +1817,6 @@ p.no-events {
 
     .a-z-box .accordion-col {
       padding: 0 1.5em;
-    }
-
-     .comic-list-col h3 {
-      margin-bottom:0.5em;
-      padding-bottom:0.5em;
-      border-bottom: 1px solid #ffffff14;
     }
 
     .comic-list-col {
@@ -1788,7 +1859,7 @@ p.no-events {
     }
 
      .comic-list-col h3 {
-      margin-bottom:0.5em;
+      margin-bottom:1em;
       padding-bottom:0.5em;
       border-bottom: 1px solid #ffffff14;
     }
@@ -1854,16 +1925,16 @@ p.no-events {
 
     .comic-profile-description {
       text-align:left;
-      padding-right:6em;
+      padding-right:8em;
       max-width:80vw;
     }
     .comic-profile-description h1 {
-      margin-bottom:0.5em;
+      margin-bottom:1em;
       color: #f1b0c4;
+      border-bottom: 2px solid #413e8d;
     }
     .comic-profile-description .comic-short-blurb {
-      font-size:1.75em;
-      margin-bottom:1.5em;
+      font-size:1.9em;
     }
 
     .comic-short-blurb {
@@ -1878,6 +1949,57 @@ p.no-events {
       padding-top:6em;
     }
 
+    /*individual event page*/
+
+    .individual-event-details .ind-event-banner-img img {
+      margin-top:0;
+    }
+
+    .event-full-content {
+      text-align:left;
+    }
+    .individual-event-details {
+      padding-top:6em;
+    }
+
+    .ind-event-banner-img .img-container {
+      max-width:40em;
+      margin:0 auto;
+    }
+
+    .ind-event-banner-img {
+      padding-left:7vw;
+    }
+
+    .show-details-header {
+      font-size:2.5em;
+      position:relative;
+      border-bottom:2px solid #413e8d;
+    
+    }
+
+    .individual-event-details {
+    position: relative;
+    z-index: 1;
+    }
+
+    .event-full-content {
+      width:85%;
+      max-width: 65em;
+      padding-left:4em;
+    }
+
+    .ind-event-banner-img .img-container {
+    margin: 0 0 0 auto;
+    }
+
+    #dateetimecomics-container {
+    padding-bottom: 1.5em;
+    }
+
+    .go-back-lg-screens {
+      margin-bottom:6em;
+    }
 
 }
 
@@ -1888,7 +2010,7 @@ p.no-events {
 
   /*general*/
 
-    .hero {
+  .hero {
     margin-top:10.5em;
     padding: 8em 1em;
   }
@@ -2136,17 +2258,25 @@ p.no-events {
 
   .card-event img {
   position: relative;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-in-out;
   }
 
-  .card-event img:hover, .comedian-list-item .hover-animation {
+  .card-event img:hover, .hover-animation {
   transform: translateY(-0.6em) translateZ(0);
   box-shadow: 0px 35px 50px -6px #0000001a;
-  border-color:#ffffffba;
+  border-color:#ffffffba!important;
   }
 
    .event-calendar-controls {
     padding: 0em;
+  }
+
+  .event-fullblurb-box p {
+    font-size:1.75em;
+  }
+
+  .event-fullblurb-box {
+    margin-bottom:1.5em;
   }
 
 
@@ -2173,16 +2303,20 @@ p.no-events {
 
     /*individual comic page*/
 
-        #comedian-profile-container .comic-profile-img {
+      #comedian-profile-container .comic-profile-img {
             text-align:right;
     }
 
     .comic-profile-description {
-      padding:0 6em 6em 6em;
+      padding:0 6em 6em 3em;
       width:40vw;
       max-width: 60em;
     }
-
+    p.event-date {
+    margin-bottom:0em;
+    }
+    .upcoming-text-container p.event-date {
+        margin-bottom:1em;
 
 }
 

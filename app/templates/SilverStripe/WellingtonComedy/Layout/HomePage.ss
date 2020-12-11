@@ -71,7 +71,7 @@
 		</div>
 	</div>
 </div>
-<div id="home-upcoming-events" class="page-section squeeze-in light-bg">
+<div id="home-upcoming-events" class="page-section squeeze-in wavy-section-light-bg">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
