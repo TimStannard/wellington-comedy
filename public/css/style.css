@@ -191,6 +191,10 @@ p.sm.bold{
   text-align:center;
 }
 
+.no-style {
+  list-style: none;
+}
+
 /*navbar icon*/
 
 #nav-hamburger {
@@ -343,14 +347,6 @@ p.sm.bold{
 
 .time-icon {
   margin-right:0.75em;
-}
-
-.fa-quote-left:before {
-  margin-right:0.5em;
-}
-
-.fa-quote-right:before {
-  margin-left:0.5em;
 }
 
 /*searchbar*/
@@ -894,10 +890,15 @@ p.no-events {
     font-size: 3em;
   }
 
+  /*start, end dates and times*/
+
 .dtstart {
   font-weight:600;
   display:block;
 }
+  .event-full-content .cta-btn.sm {
+    margin-right:0.5em;
+  }
 
 #individual-event-hero {
   position:relative;
@@ -1007,7 +1008,7 @@ p.no-events {
 }
 
 .other-dates-container .dtstart:before{
-  content:"\2192\0000a0\0000a0";
+  content:"\01F4C5";
   font-weight: 600;
   color: #f1b0c4;
 }
@@ -1088,7 +1089,7 @@ p.no-events {
 .accordion {
   font-size:1.5em;
   font-weight:600;
-  padding:0.25em;
+  padding:0.35em;
   border-radius: 0.5em;
   border: 1px solid #ffffff30;
   margin-bottom:0.25em;
@@ -1208,7 +1209,7 @@ p.no-events {
 }
 
 .sm-upcoming-gig-title {
-  padding-top:1.75em;
+  padding-top:1.5em;
 }
 
 .large-search-container #Form_SearchForm {
@@ -1220,7 +1221,7 @@ p.no-events {
 }
 
 #searchresults-list .comedian-list-item {
-  padding:0.5em 0 1.25em 0;
+  padding:0.65em 0 1em 0;
 }
 
 #searchresults-list .gig-link {
@@ -1294,6 +1295,10 @@ p.no-events {
 
 .about-accordion-container {
   padding:5em 0;
+}
+
+.about-accordion-container .info-accordion{
+  padding:0.75em;
 }
 
 .about-accordion-container .accordion-content {
@@ -1661,7 +1666,7 @@ p.no-events {
 
 
   .dtstart {
-    margin-bottom: 1em;
+    margin-bottom: 0.33em;
   }
 
   #comic-profile-text {
@@ -1727,7 +1732,7 @@ p.no-events {
     padding: 0.55em 0 0.95em 0;
   }
   #searchresults-list .comedian-list-item p {
-    font-size:1.55em;
+    font-size:1.5em;
   }
 
   .a-z-box #Form_SearchForm {
@@ -1755,15 +1760,13 @@ p.no-events {
     margin-bottom:0.33em;
   }
 
-  .event-full-content .cta-btn.sm {
-    margin-right:0.5em;
-  }
-
   .ind-event-banner-img .img-container {
     max-width: 40em;
     margin: 2em auto;
   }
-
+  .cta-btn.sm.go-back-lg-screens {
+    margin: 1em auto 6em auto;
+  }
 
 }
 
@@ -1907,7 +1910,7 @@ p.no-events {
      }
 
    .a-z-box #Form_SearchForm_Keywords {
-      font-size:0.85em;
+      font-size:1em;
     }
 
     .a-z-box i {
@@ -1975,7 +1978,7 @@ p.no-events {
       font-size:2.5em;
       position:relative;
       border-bottom:2px solid #413e8d;
-    
+      padding-bottom: 0.125em;
     }
 
     .individual-event-details {
@@ -1997,9 +2000,9 @@ p.no-events {
     padding-bottom: 1.5em;
     }
 
-    .go-back-lg-screens {
-      margin-bottom:6em;
-    }
+    .cta-btn.sm.go-back-lg-screens {
+    margin: 1em 0 6em 0;
+  }
 
 }
 
@@ -2317,6 +2320,21 @@ p.no-events {
     }
     .upcoming-text-container p.event-date {
         margin-bottom:1em;
+      }
+
+    /*-----------------------------------------about page*/
+
+    #about-page-hero {
+          background-position: 50% 50%;
+    }
+
+    .about-accordion-container .accordion-content {
+      text-align:left;
+    }
+
+     .accordion-content p:first-of-type {
+      padding-top:0.75em;
+     }
 
 }
 

@@ -22,7 +22,7 @@
         <% if $Comics %>
           	<div class="row">
           	<% loop $Comics %>
-				<div class="col-md-3 col-sm-12">
+				<div class="col-md-4 col-lg-3 col-sm-12">
 					<div class="comedian-list-item">
 						<% if $Photo %>
 							<a href="$Link">
@@ -41,7 +41,7 @@
 		<% if $Events %>
 			<div class="row">
 			<% loop $Events %>
-				<div class="col-md-3 col-sm-12 upcoming-event">
+				<div class="col-md-4 col-lg-3 col-sm-12 upcoming-event">
 					<a href="$Link">
 						<div class="upcoming-event-inner">
 							<% if $Image %>

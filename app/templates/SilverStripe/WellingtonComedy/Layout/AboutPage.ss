@@ -11,9 +11,9 @@
 				<p>$Content</p>
 			</div>
 		</div> --%>
-		<div class="row blurb-row page-section squeeze-in">
+		<div class="row blurb-row page-section squeeze-in wavy-section-bg">
 			<div class="col-12">
-				<h2 class="small-header">What we do</h2>
+				<h2 class="small-header wavy">What we do</h2>
 			</div>
 			<div class="col-md-4 blurb">
 				<i class="fas fa-user-friends"></i>
@@ -39,7 +39,9 @@
 		</div>
 		<div class="row about-accordion-container light-bg page-section squeeze-in">
 			<div class="col-sm-12">
-				<h2 class="small-header">More info</h2>
+				<h2 class="small-header">About Humorous Arts</h2>
+			</div>
+			<div class="col-sm-12">
 				<button class="accordion info-accordion">Humorous Arts Trust Guiding Principles</button>
 				<div class="accordion-content">
 					<ul class="regular-text">
@@ -59,6 +61,8 @@
 						<li>We maintain a zero-tolerance policy regarding all forms of discrimination, harassment or abuse.</li>
 						<li>
 							If you need to raise an issue, please contact the Humorous Arts Trust administrator.
+						</li>
+						<li class="no-style">
 							<button class="cta-btn sm">See full code of conduct</button>
 						</li>
 					</ul>
