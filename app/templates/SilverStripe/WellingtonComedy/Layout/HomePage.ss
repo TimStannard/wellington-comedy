@@ -20,7 +20,7 @@
 							<a href="$Link">
 								<h1 class="hero-gig-link">$Title</h1>
 							</a>
-							<div class="todays-event-blurb non-mobile shadow-blu">$ShortBlurb</div>
+							<div class="todays-event-blurb non-mobile shadow-blu">$ShortBlurb.LimitCharacters(180)</div>
 							<div class="todays-event-blurb mobile">$ShortBlurb.LimitCharacters(180)</div>
 							<a href="$TicketLink">
 								<button class="cta-btn">get tickets</button>
@@ -40,7 +40,7 @@
 							<a href="$Link">
 								<h1 class="hero-gig-link">$Title</h1>
 							</a>
-							<div class="todays-event-blurb non-mobile shadow-blu">$ShortBlurb</div>
+							<div class="todays-event-blurb non-mobile shadow-blu">$ShortBlurb.LimitCharacters(180)</div>
 							<div class="todays-event-blurb mobile">$ShortBlurb.LimitCharacters(180)</div>
 							<a href="$TicketLink">
 								<button class="cta-btn">get tickets</button>

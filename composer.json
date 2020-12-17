@@ -10,7 +10,8 @@
         "silverstripe/login-forms": "4.1.2@stable",
         "nesbot/carbon": "1.39.1",
         "mattclegg/silverstripe-event-calendar": "dev-master",
-        "undefinedoffset/silverstripe-nocaptcha": "^2.1"
+        "undefinedoffset/silverstripe-nocaptcha": "^2.1",
+        "silverstripe/lumberjack": "^2.0"
     },
     "repositories": [
     {
