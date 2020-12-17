@@ -63,7 +63,7 @@
 							If you need to raise an issue, please contact the Humorous Arts Trust administrator.
 						</li>
 						<li class="no-style">
-							<button class="cta-btn sm">See full code of conduct</button>
+							<a href="pdf/HatGreenroomGuidelines.pdf"><button class="cta-btn sm">See full code of conduct</button></a>
 						</li>
 					</ul>
 				</div>

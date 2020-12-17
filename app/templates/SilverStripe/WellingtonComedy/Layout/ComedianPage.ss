@@ -39,7 +39,10 @@
 						<a href="$Link">
 							<h4 class="gig-link">$Title</h4>
 						</a>
-						<p class="event-date">$DateRange</p>
+						<p class="event-date">$DateRange
+						<% if $StartTime %>
+						<span class="time-icon">&#128336;</span>$StartTime.Format('h:mm a') - $EndTime.Format('h:mm a')<% end_if %>
+						</p>
 						<a href="$Link">
 							<button class="cta-btn sm">Read more</button>
 						</a>

@@ -1126,7 +1126,7 @@ p.no-events {
 
 #comedian-profile-hero {
   background: url("../img/contact-minimal-bg.jpg") no-repeat; 
-  background-position: 00% 100%;
+  background-position: 0% 0%;
   background-size:cover;
 }
 

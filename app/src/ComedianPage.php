@@ -32,6 +32,7 @@ class ComedianPage extends Page
     private static $db = [
         'Blurb' => 'Text',
         'Profile' => 'HTMLText',
+        'Name' => 'Varchar'
     ];
 
     private static $belongs_many_many = array(
@@ -65,16 +66,26 @@ class ComedianPage extends Page
 
         $fields->addFieldToTab('Root.Main', $photo =UploadField::create('Photo','Headshot photo'), 'Metadata');
 
+        $fields->addFieldToTab('Root.Main', $name =TextField::create('Name','Name'), 'Blurb');
+
         $photo->setFolderName('comedian-photos');
 
         $fields->removeByName([
             'MenuTitle',
             'URLSegment',
             'Content',
+            'Title'
         ]);
 
         return $fields;
 
   	}
+        public function onBeforeWrite()
+    {
+        $this->owner->Title = $this->owner->Name;
+        $this->owner->MenuTitle = $this->owner->Name;
+        $this->owner->URLSegment = $this->owner->generateURLSegment($this->owner->Name);
+        parent::onBeforeWrite();
+    }
 
 }

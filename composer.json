@@ -42,7 +42,8 @@
             "themes/wgtncomedy/css",
             "themes/wgtncomedy/fonts",
             "themes/wgtncomedy/js",
-            "themes/wgtncomedy/img"
+            "themes/wgtncomedy/img",
+            "themes/wgtncomedy/pdf"
         ]
     },
     "config": {
