@@ -8,8 +8,6 @@
 
 
 /*   pink #f1b0c4   */
-
-
 /*   blue #302F83   */
 
 *,
@@ -349,6 +347,31 @@ p.sm.bold{
   margin-right:0.75em;
 }
 
+/*forms*/
+
+.styled-form select, .styled-form input {
+    font-size: 1.5em;
+    border-radius: 0.25em;
+    color: white;
+    background-color: #302f83;
+    border: 1px solid white;
+    font-weight: 200;
+    padding: 0.05em 0.1em;
+    margin-bottom:0.1em;
+}
+
+
+.styled-form input {
+    padding: 0.25em 0.5em;
+    font-weight:400;
+    color: #302f83;
+    background:white;
+}
+
+label {
+  font-size:1.65em;
+}
+
 /*searchbar*/
 
 #Form_SearchForm {
@@ -561,7 +584,7 @@ p.sm.bold{
 
 #home-hero .todays-event-blurb {
   position: relative;
-  padding-top: 1.5em;
+  padding-top: 1em;
   font-size: 1.9em;
   margin: 0 auto;
   line-height: 1.3em;
@@ -679,18 +702,67 @@ h2 {
   padding-bottom: 0;
 }
 
+#home-upcoming-events #dateetimecomics-container img, #upcoming-events #dateetimecomics-container img {
+  border-radius: 50%;
+  margin: 0 0.05em 0.5em 0;
+  border: 1px solid #ffffff30;
+  transition: all 0.2s ease-in-out;
+  width:50px;
+  height:50px;
+}
 
-/*contact banner*/
+/*newsletter banner*/
 
-#contact-minimal {
+#newsletter-banner, #contact-minimal {
   text-align: center;
   background: url("../img/contact-minimal-bg.jpg") no-repeat; 
   background-position: 50% 100%;
   background-size:cover;
 }
 
-#contact-minimal p {
+#newsletter-banner p {
   padding-top: 1.75em;
+}
+
+#newsletter-banner #mc_embed_signup {
+  margin-top:2em;
+}
+
+#mc_embed_signup input {
+  margin-left:0.5em;
+  box-shadow: 0px 18px 20px -6px #00000040;
+}
+#mc_embed_signup label {
+  text-shadow: 0 0 1em #302F83, 0 0 0.5em #302F83, 0 0 0.25em #302F83;
+}
+
+#mc_embed_signup #mc-embedded-subscribe {
+    background: #4c4c94;
+    margin-top: 0.5em;
+    color:white;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    margin-left: 2.68em;
+    transition: all 0.3s ease-in-out;
+}
+
+#mc_embed_signup #mc-embedded-subscribe:hover {
+    background: white;
+    color:#302F83;
+    cursor:pointer;
+}
+
+#mc_embed_signup div.mce_inline_error {
+  margin-top:1.5em!important;
+  border-radius:0.5em;
+}
+
+#mce-error-response {
+  margin: 1.5em 0em;
+  padding: 5px 10px;
+    background-color: #6B0505;
+    font-weight: bold;
+      border-radius:0.5em;
 }
 
 /*footer*/
@@ -757,9 +829,7 @@ h2 {
     border-radius: 0.75em;
     margin: 1px;
     text-align: center;
-
 }
-
 
 #upcoming-calendar table {
   border-collapse: separate;
@@ -799,17 +869,6 @@ h2 {
 
 /*month jumper*/
 
-.event-calendar-month-jumper select, .event-calendar-month-jumper input {
-    font-size: 1.5em;
-    border-radius: 0.25em;
-    color: white;
-    background-color: #302f83;
-    border: 1px solid white;
-    font-weight: 200;
-    padding: 0.05em 0.1em;
-    margin-bottom:0.3em;
-}
-
 .event-calendar-next-prev a:nth-of-type(2) {
   display:block;
 }
@@ -826,12 +885,6 @@ h2 {
   margin-bottom:1em;
 }
 
-.event-calendar-month-jumper input {
-    padding: 0.25em 0.5em;
-    font-weight:400;
-    color: #302f83;
-    background:white;
-}
 
 #date-jumper-container h3 {
   font-size:1.5em;
@@ -1039,7 +1092,7 @@ p.no-events {
 /*-------------------------------------comedian holder page*/
 
 #comedians-holder-hero {
-  background: url("../img/nokise-lg-bg.jpg") no-repeat; 
+  background: url("../img/comics-holder-bg.jpg") no-repeat; 
   background-position: 100% 100%;
   background-size:cover;
 }
@@ -1330,7 +1383,7 @@ p.no-events {
   font-size:0.75em;
 }
 
-/*-------------------------contact*/
+/*-------------------------contact page*/
 
 #contact-page-hero {
   background: url("../img/contact-minimal-bg.jpg") no-repeat; 
@@ -1401,7 +1454,7 @@ p.no-events {
   background:#4c4c94;
   position:relative;
   z-index:2;
-  margin-top:0.5em;
+  margin-top:0.75em;
  }
 
 #Form_ContactForm_action_submit {
@@ -1597,8 +1650,7 @@ p.no-events {
   }
   .todays-events-swiper h2 {
     display: initial;
-    /*font-size: 4.5rem;*/
-    font-size:3.5rem;
+    font-size: 4.5rem;
     color: #f1b0c4;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -1613,7 +1665,9 @@ p.no-events {
     animation-timing-function: ease-in-out;
   }
   .swiper-slide h2{
-    margin-left:-1.75em;
+    margin-left: -1.75em;
+    top: 0.05em;
+    font-size: 3.5em;
   }
   .swiper-slide:first-of-type h2 {
     margin-top: 7.05em;
@@ -1638,14 +1692,19 @@ p.no-events {
     bottom:-20px;
   }
 
+  #home-hero #dateetimecomics-container img {
+    width:75px;
+    height:75px;
+  }
+
   /*upcoming home events*/
   .page-section {
     padding: 6em 0;
   }
 
-  /*contact*/
+  /*newsletter banner*/
 
-  #contact-minimal {
+  #newsletter-banner {
     background-position:0% 50%;
     box-shadow:none;
   }
@@ -1653,7 +1712,7 @@ p.no-events {
   /*-------------------------------------- comic holder page*/
 
     #comedians-holder-hero {
-  background-position: 100% 59%;
+  background-position: 100% 70%;
    box-shadow: inset 120px 118px 120px 0px #0000001c;
   }
 
@@ -1830,10 +1889,8 @@ p.no-events {
     text-align:center;
   }
 
-  /*upcoming shows*/
 
-
-  /*comedian holder page*/
+  /*------------------------comedian holder page*/
 
   #comedian-holder-list {
     padding:2.5em 2em 4em 2em;
@@ -1952,7 +2009,7 @@ p.no-events {
       font-size:0.95em;
     }
 
-    /*individual comic page*/
+    /*------------------------individual comic page*/
 
     #comedian-profile-container img {
       margin:0;
@@ -1987,7 +2044,7 @@ p.no-events {
       padding-top:6em;
     }
 
-    /*individual event page*/
+    /*------------------------individual event page*/
 
     .individual-event-details .ind-event-banner-img img {
       margin-top:0;
@@ -2040,7 +2097,7 @@ p.no-events {
     margin: 1em 0 6em 0;
   }
 
-  /*contact page*/
+  /*------------------------contact page*/
 
   #contact-content-container #Form_ContactForm{
     width:75vw;
@@ -2159,13 +2216,14 @@ p.no-events {
     padding-bottom:0.5em;
   }
     #default-hero-h2 {
-    margin-top:6.7em;
+    margin:5.8em 0 0 0.25em;
   }
   .swiper-container {
     padding-top:11em;
     margin-top:0;
     height: 100vh;
     width: 100%;
+    max-height: 78em;
   }
 
   .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -2183,6 +2241,8 @@ p.no-events {
     margin-top: 6.25em;
     transform-origin: 36.5% 160%;
     margin-left:2.35em;
+    top:0;
+    font-size:4.5em;
 
   }
 
@@ -2218,13 +2278,13 @@ p.no-events {
     font-size:2.5em;
   }
 
-  #contact-minimal p {
+  #newsletter-banner p {
     padding-top: 0em;
     max-width: 60%;
     margin: 0 auto;
 }
 
-  /*upcoming shows page*/
+  /*------------------------upcoming shows page*/
 
   #upcoming-hero {
     background-position:0% 60%;
@@ -2283,7 +2343,7 @@ p.no-events {
     font-size: 1.08em;
 }
 
-  .event-calendar-month-jumper input,   .event-calendar-month-jumper select {
+  .styled-form input,   .styled-form select {
     margin-top:0.25em;
   }
   .upcoming-events-desktop {
@@ -2330,6 +2390,15 @@ p.no-events {
     margin-bottom:1em;
   }
 
+  .upcoming-event #dateetimecomics-container img {
+  border-radius: 50%;
+  margin: 0 0.05em 0.5em 0;
+  }
+
+    .upcoming-event #dateetimecomics-container {
+      padding-top:0.5em;
+    }
+
   .card-event img {
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -2375,7 +2444,7 @@ p.no-events {
       height:4.5em;
     }
 
-    /*individual comic page*/
+    /*------------------------individual comic page*/
 
       #comedian-profile-container .comic-profile-img {
             text-align:right;
@@ -2413,7 +2482,7 @@ p.no-events {
       margin-top:0.075em;
      }
      #Form_ContactForm #Form_ContactForm_action_submit {
-      margin-top:0.75em;
+      margin-top:1em;
      }
 
 }

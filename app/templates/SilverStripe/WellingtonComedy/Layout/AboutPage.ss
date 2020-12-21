@@ -80,4 +80,4 @@
 	</div>
 </div>
 
-<% include ContactMinimalBanner %> 
+<% include NewsletterBanner %> 

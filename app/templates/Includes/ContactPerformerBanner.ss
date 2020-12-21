@@ -5,7 +5,7 @@
 		   <div class="col">
 		        <div class="contact-content">
 		        	<p class="med shadow-blu">Interested in performing? Book a spot today on one of our open mics.</p>
-                    <div class="cta-btn sm"><a href="contact">Get in touch</a></div>
+                    <a href="contact"><button class="cta-btn sm">Get in touch</button></a>
 		        </div>
 		   </div>
 		</div>

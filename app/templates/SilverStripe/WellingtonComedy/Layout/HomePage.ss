@@ -89,7 +89,19 @@
 								<a href="$Link" class="hover-white">
 									<h4 class="gig-link wavy">$Title</h4>
 								</a>
-								<p class="event-date">$DateRange</p>
+								<p class="event-date">$DateRange
+								<% if $StartTime %>
+								<span class="time-icon">&#128336;</span>$StartTime.Format('h:mm a') - $EndTime.Format('h:mm a')<% end_if %>
+								</p>
+								<%-- <% if $DateTimeComics %>
+							            <div id="dateetimecomics-container">
+							                <% loop $DateTimeComics %>
+							                    <span class="ind-event-comics image-hover-link">
+							                    <a href="$Link">$Photo.Fit(50,50)</a>
+							                    </span>
+							                <% end_loop %>
+							            </div>
+						            <% end_if %> --%>
 								<p class="todays-event-blurb sm">$ShortBlurb.LimitCharacters(180)</p>
 								<a href="$Link">
 									<button class="cta-btn sm">Read more</button>
@@ -105,4 +117,4 @@
 	</div>
 </div>
 
-<% include ContactMinimalBanner %> 
+<% include NewsletterBanner %> 
